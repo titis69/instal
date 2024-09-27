@@ -9,9 +9,9 @@ make install
 cd
 rm -rf wondershaper
 cd /usr/bin
-wget -O backup "https://raw.githubusercontent.com/okysmilee/install/main/menu/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/okysmilee/install/main/menu/restore.sh"
-wget -O cleaner "https://raw.githubusercontent.com/okysmilee/install/main/install/cleaner.sh"
+wget -O backup "https://raw.githubusercontent.com/titis69/instal/main/menu/backup.sh"
+wget -O restore "https://raw.githubusercontent.com/titis69/instal/main/menu/restore.sh"
+wget -O cleaner "https://raw.githubusercontent.com/titis69/instal/main/install/cleaner.sh"
 chmod +x /usr/bin/backup
 chmod +x /usr/bin/restore
 chmod +x /usr/bin/cleaner
