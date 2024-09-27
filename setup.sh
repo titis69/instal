@@ -56,7 +56,6 @@ echo " "
 until [[ $name =~ ^[a-zA-Z0-9_.-]+$ ]]; do
 read -rp "Masukan Nama Kamu Disini tanpa spasi : " -e name
 done
-done
 rm -rf /etc/profil
 echo "$name" > /etc/profil
 echo ""
