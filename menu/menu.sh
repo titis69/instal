@@ -17,16 +17,16 @@ DAY=$(date +%A)
 DATE=$(date +%m/%d/%Y)
 DATE2=$(date -R | cut -d " " -f -5)
 MYIP=$(wget -qO- ifconfig.me)
-Isadmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $5}')
-Exp2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $3}')
-Name2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
+Isadmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $5}')
+Exp2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $3}')
+Name2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
 export RED='\033[0;31m'
 export GREEN='\033[0;32m'
-Name=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
 ipsaya=$(wget -qO- ifconfig.me)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/okysmilee/permission/main/ip"
+data_ip="https://raw.githubusercontent.com/titis69/permission/main/ip"
 checking_sc() {
 useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
 if [[ $date_list < $useexp ]]; then
@@ -34,13 +34,13 @@ echo -ne
 else
 systemctl stop nginx
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}${COLBG1}          ${WH}• AUTOSCRIPT PREMIUM •                 ${NC}$COLOR1│ $NC"
+echo -e "$COLOR1│${NC}${COLBG1}      	${WH}• AUTOSCRIPT PREMIUM •             	${NC}$COLOR1│ $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│            ${RED}PERMISSION DENIED !${NC}                  $COLOR1│"
-echo -e "$COLOR1│   ${yl}Your VPS${NC} $ipsaya \033[0;36mHas been Banned ${NC}      $COLOR1│"
-echo -e "$COLOR1│     ${yl}Buy access permissions for scripts${NC}          $COLOR1│"
-echo -e "$COLOR1│             \033[0;32mContact Your Admin ${NC}                 $COLOR1│"
+echo -e "$COLOR1│        	${RED}PERMISSION DENIED !${NC}              	$COLOR1│"
+echo -e "$COLOR1│   ${yl}Your VPS${NC} $ipsaya \033[0;36mHas been Banned ${NC}  	$COLOR1│"
+echo -e "$COLOR1│ 	${yl}Buy access permissions for scripts${NC}      	$COLOR1│"
+echo -e "$COLOR1│         	\033[0;32mContact Your Admin ${NC}             	$COLOR1│"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 key
 fi
@@ -48,7 +48,7 @@ fi
 function key(){
 rm -rf /root/rmbl
 echo -e  "${COLOR1}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${COLOR1}│              PASWORD SCRIPT RMBL VPN     │${NC}"
+echo -e  "${COLOR1}│          	PASWORD SCRIPT RMBL VPN 	│${NC}"
 echo -e  "${COLOR1}└──────────────────────────────────────────┘${NC}"
 echo " "
 read -rp "Masukan Key Kamu Disini ctrl + c Exit : " -e kode
@@ -58,22 +58,22 @@ echo -e "KODE SALAH SILAHKAN MASUKKAN ULANG KODENYA"
 key
 fi
 clear
-LIST=$(curl -sS https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $2}')
-Key=$(curl -sS https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $3}')
-KEY2=$(curl -sS https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $4}')
-ADMIN=$(curl -sS https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $5}')
-TOTALIP=$(curl -sS https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $6}')
-U2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-U3=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $3}')
-U4=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $4}')
-U5=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $5}')
-U6=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $6}')
+LIST=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $2}')
+Key=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $3}')
+KEY2=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $4}')
+ADMIN=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $5}')
+TOTALIP=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $6}')
+U2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+U3=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $3}')
+U4=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $4}')
+U5=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $5}')
+U6=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $6}')
 MYIP=$(curl -sS ipv4.icanhazip.com)
-web=$(curl -sS  https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $3}')
-web2=$(curl -sS https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $2}')
-web3=$(curl -sS https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $4}')
-web4=$(curl -sS https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $5}')
-web5=$(curl -sS https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $6}')
+web=$(curl -sS  https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $3}')
+web2=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $2}')
+web3=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $4}')
+web4=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $5}')
+web5=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $6}')
 userscript=$(curl -sS https://pastebin.com/raw/zzap9GsT | awk '{print $1}')
 emailscript=$(curl -sS https://pastebin.com/raw/zzap9GsT | awk '{print $2}')
 tokenscript=$(curl -sS https://pastebin.com/raw/zzap9GsT | awk '{print $3}')
@@ -85,7 +85,7 @@ MYIP=$(curl -sS ipv4.icanhazip.com)
 hhari=$(date -d "$web3 days" +"%Y-%m-%d")
 mkdir /root/rmbl
 cd /root/rmbl
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip >/dev/null 2>&1
+wget https://raw.githubusercontent.com/titis69/permission/main/ip >/dev/null 2>&1
 if [ "$U4" = "$MYIP" ]; then
 sed -i "s/### $U2 $U3 $U4 $U5/### $U2 $hhari $U4 $U5/g" /root/rmbl/ip
 else
@@ -110,7 +110,7 @@ author4=$(cat /etc/profil)
 hhari=$(date -d "$KEY2 days" +"%Y-%m-%d")
 mkdir /root/casper
 cd /root/casper
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip >/dev/null 2>&1
+wget https://raw.githubusercontent.com/titis69/permission/main/ip >/dev/null 2>&1
 if [ "$U4" = "$MYIP" ]; then
 sed -i "s/### $U2 $U3 $U4 $U5/### $U2 $hhari $U4 $U5/g" /root/rmbl/ip
 else
@@ -128,7 +128,7 @@ git remote add origin https://github.com/${userscript}/permission >/dev/null 2>&
 git push -f https://${tokenscript}@github.com/${userscript}/permission >/dev/null 2>&1
 sleep 0.5
 rm ip
-wget https://raw.githubusercontent.com/okysmilee/license/main/key >/dev/null 2>&1
+wget https://raw.githubusercontent.com/titis69/license/main/key >/dev/null 2>&1
 if [ "$ADMIN" = "ON" ]; then
 sed -i "/^### $LIST $Key $KEY2 $ADMIN $TOTALIP/d" /root/rmbl/key
 else
@@ -152,7 +152,7 @@ sleep 1
 key
 fi
 echo -e  "${COLOR1}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${COLOR1}│              INFO LICENSE KEY            │${NC}"
+echo -e  "${COLOR1}│          	INFO LICENSE KEY        	│${NC}"
 echo -e  "${COLOR1}└──────────────────────────────────────────┘${NC}"
 echo -e "SUCCES MASUKKAN KEY SILAHKAN DITUNGGU"
 echo -e "2 MENIT AGAR SERVER KEREFRESH"
@@ -162,7 +162,7 @@ reboot
 exit
 clear
 }
-madmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $5}')
+madmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $5}')
 checking_sc
 cd
 if [ ! -e /etc/per/id ]; then
@@ -271,18 +271,18 @@ fi
 
 udp_custom=$( systemctl status udp-custom | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $udp_custom == "running" ]]; then
-    status_udp="${COLOR1}ON${NC}"
+	status_udp="${COLOR1}ON${NC}"
 else
-    status_udp="${RED}OFF${NC}"
-    systemctl start udp-custom
+	status_udp="${RED}OFF${NC}"
+	systemctl start udp-custom
 fi
 
 stat_noobz=$( systemctl status noobzvpns | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $stat_noobz == "running" ]]; then
-    stat_noobz="${COLOR1}ON${NC}"
+	stat_noobz="${COLOR1}ON${NC}"
 else
-    stat_noobz="${RED}OFF${NC}"
-    systemctl start noobzvpns
+	stat_noobz="${RED}OFF${NC}"
+	systemctl start noobzvpns
 fi
 
 if [[ -e /usr/bin/kyt ]]; then
@@ -307,9 +307,9 @@ Error="${Green_font_prefix}${Font_color_suffix}${Red_font_prefix}[EXPIRED]${Font
 
 today=$(date -d "0 days" +"%Y-%m-%d")
 if [[ $today < $Exp2 ]]; then
-    sts="${Info}"
+	sts="${Info}"
 else
-    sts="${Error}"
+	sts="${Error}"
 fi
 vmess=$(grep -c -E "^#vmg " "/etc/xray/config.json")
 vless=$(grep -c -E "^#vlg " "/etc/xray/config.json")
@@ -341,14 +341,14 @@ fi
 function m-bot2(){
 clear
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1  ${WH}Please select a Bot type below                 ${NC}"
+echo -e "$COLOR1  ${WH}Please select a Bot type below             	${NC}"
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1  [ 1 ] ${WH}Buat/Edit BOT INFO Multi Login SSH, XRAY & TRANSAKSI   ${NC}"
 echo -e ""
-echo -e "$COLOR1  [ 2 ] ${WH}Buat/Edit BOT INFO Create User & Lain Lain    ${NC}"
+echo -e "$COLOR1  [ 2 ] ${WH}Buat/Edit BOT INFO Create User & Lain Lain	${NC}"
 echo -e ""
-echo -e "$COLOR1  [ 3 ] ${WH}Buat/Edit BOT INFO Backup Telegram    ${NC}"
+echo -e "$COLOR1  [ 3 ] ${WH}Buat/Edit BOT INFO Backup Telegram	${NC}"
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
 read -p "   Please select numbers 1-3 or Any Button(Random) to exit : " bot
 echo ""
@@ -403,42 +403,42 @@ clear
 clear && clear && clear
 clear;clear;clear
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
-echo -e " $COLOR1│${NC} ${COLBG1}               ${WH} • SWARA VPN TUNNELING •                 ${NC} $COLOR1│ $NC"
+echo -e " $COLOR1│${NC} ${COLBG1}           	${WH} • SWARA VPN TUNNELING •             	${NC} $COLOR1│ $NC"
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
 echo -e " $COLOR1╭══════════════════════════════════════════════════════════╮${NC}"
-echo -e " $COLOR1│$NC${WH} ❈ OS                 ${COLOR1}: ${WH}$MODEL2${NC}"
+echo -e " $COLOR1│$NC${WH} ❈ OS             	${COLOR1}: ${WH}$MODEL2${NC}"
 echo -e " $COLOR1│ $NC${WH}❈ CORE & CPU Usage   ${COLOR1}: ${WH}$CORE Core & $cpu_usage"
-echo -e " $COLOR1│$NC${WH} ❈ RAM                ${COLOR1}: ${WH}$tram / $uram MB${NC}"
-echo -e " $COLOR1│$NC${WH} ❈ DATE               ${COLOR1}: ${WH}$DATE2 WIB${NC}"
-echo -e " $COLOR1│$NC${WH} ❈ UPTIME             ${COLOR1}: ${WH}$uphours $upminutes $uptimecek"
-#echo -e " $COLOR1│$NC${WH} ❈ TIME               ${COLOR1}: ${WH}$TIMEZONE${NC}"
-echo -e " $COLOR1│$NC${WH} ❈ ISP                ${COLOR1}: ${WH}$ISP${NC}"
-echo -e " $COLOR1│$NC${WH} ❈ City               ${COLOR1}: ${WH}$CITY${NC}"
-echo -e " $COLOR1│$NC${WH} ❈ IP VPS             ${COLOR1}: ${WH}$MYIP${NC}"
-echo -e " $COLOR1│$NC${WH} ❈ DOMAIN             ${COLOR1}: ${WH}$(cat /etc/xray/domain)"
-echo -e " $COLOR1│$NC${WH} ❈ NSDomain           ${COLOR1}: ${WH}$(cat /etc/xray/dns)"
+echo -e " $COLOR1│$NC${WH} ❈ RAM            	${COLOR1}: ${WH}$tram / $uram MB${NC}"
+echo -e " $COLOR1│$NC${WH} ❈ DATE           	${COLOR1}: ${WH}$DATE2 WIB${NC}"
+echo -e " $COLOR1│$NC${WH} ❈ UPTIME         	${COLOR1}: ${WH}$uphours $upminutes $uptimecek"
+#echo -e " $COLOR1│$NC${WH} ❈ TIME           	${COLOR1}: ${WH}$TIMEZONE${NC}"
+echo -e " $COLOR1│$NC${WH} ❈ ISP            	${COLOR1}: ${WH}$ISP${NC}"
+echo -e " $COLOR1│$NC${WH} ❈ City           	${COLOR1}: ${WH}$CITY${NC}"
+echo -e " $COLOR1│$NC${WH} ❈ IP VPS         	${COLOR1}: ${WH}$MYIP${NC}"
+echo -e " $COLOR1│$NC${WH} ❈ DOMAIN         	${COLOR1}: ${WH}$(cat /etc/xray/domain)"
+echo -e " $COLOR1│$NC${WH} ❈ NSDomain       	${COLOR1}: ${WH}$(cat /etc/xray/dns)"
 echo -e " $COLOR1╰══════════════════════════════════════════════════════════╯${NC}"
-echo -e "    $COLOR1╭═════════════════ • ${NC}${WH}STATUS SERVER${NC}${COLOR1} • ═══════════════╮${NC}"
-echo -e "     ${WH} SSH WS : ${status_ws} ${WH} XRAY : ${status_xray} ${WH} NGINX : ${status_nginx} ${WH} DROPBEAR : ${status_beruangjatuh}$NC"
-echo -e "               ${WH} UDP CUSTOM : ${status_udp} ${WH} NOOBZVPNS : ${stat_noobz} ${NC}"
-echo -e "    $COLOR1╰═══════════════════════════════════════════════════╯${NC}"
-echo -e "        $COLOR1╭════════════════════════════════════════════╮${NC}"
-echo -e "                 $COLOR1$NC${WH}    LIST ACCOUNT PREMIUM ${NC}"
-echo -e "        $COLOR1      ═════════════════════════════════ ${NC}"
-printf "                \033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " SSH/OPVPN   =" "$total_ssh" "ACCOUNT "
-printf "                \033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " VMESS/WS    =" "$vmess" "ACCOUNT "
-printf "                \033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " VLESS/WS    =" "$vless" "ACCOUNT "
-printf "                \033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " TROJAN/GRPC =" "$trtls" "ACCOUNT "
-printf "                \033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " NOOBZVPNS   =" "$jumlah_noobz" "ACCOUNT "
-echo -e "      $COLOR1╰═════════════════════════════════════════════╯${NC}"
+echo -e "	$COLOR1╭═════════════════ • ${NC}${WH}STATUS SERVER${NC}${COLOR1} • ═══════════════╮${NC}"
+echo -e " 	${WH} SSH WS : ${status_ws} ${WH} XRAY : ${status_xray} ${WH} NGINX : ${status_nginx} ${WH} DROPBEAR : ${status_beruangjatuh}$NC"
+echo -e "           	${WH} UDP CUSTOM : ${status_udp} ${WH} NOOBZVPNS : ${stat_noobz} ${NC}"
+echo -e "	$COLOR1╰═══════════════════════════════════════════════════╯${NC}"
+echo -e "    	$COLOR1╭════════════════════════════════════════════╮${NC}"
+echo -e "             	$COLOR1$NC${WH}	LIST ACCOUNT PREMIUM ${NC}"
+echo -e "    	$COLOR1  	═════════════════════════════════ ${NC}"
+printf "            	\033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " SSH/OPVPN   =" "$total_ssh" "ACCOUNT "
+printf "            	\033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " VMESS/WS	=" "$vmess" "ACCOUNT "
+printf "            	\033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " VLESS/WS	=" "$vless" "ACCOUNT "
+printf "            	\033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " TROJAN/GRPC =" "$trtls" "ACCOUNT "
+printf "            	\033[1;37m%-16s ${COLOR1}%-4s${NC} ${WH}%-5s\e[0m\n" " NOOBZVPNS   =" "$jumlah_noobz" "ACCOUNT "
+echo -e "  	$COLOR1╰═════════════════════════════════════════════╯${NC}"
 echo -e " $COLOR1╭═════════════════════ • ${WH}LIST MENU${NC}${COLOR1} • ════════════════════╮${NC}"
-echo -e " $COLOR1│$NC ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}SSH-WS    ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}NOTIF BOT  ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"
-echo -e " $COLOR1│$NC ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}VMESS     ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}THEMES     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"    
-echo -e " $COLOR1│$NC ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}VLESS     ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}UPDATE     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"   
-echo -e " $COLOR1│$NC ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}TROJAN    ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}SYSTEM     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}" 
-echo -e " $COLOR1│$NC ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}NOOBZVPNS ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}BACKUP     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}" 
-echo -e " $COLOR1│$NC ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}BOT AKUN  ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}12${WH}]${NC} ${COLOR1}• ${WH}REBOOT     ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}" 
-echo -e " $COLOR1│$NC ${WH}[${COLOR1}22${WH}]${NC} ${COLOR1}• ${WH}RUNNING   ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}23${WH}]${NC} ${COLOR1}• ${WH}RESTART    ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"
+echo -e " $COLOR1│$NC ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}SSH-WS	${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}NOTIF BOT  ${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"
+echo -e " $COLOR1│$NC ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}VMESS 	${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}THEMES 	${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"    
+echo -e " $COLOR1│$NC ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}VLESS 	${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}UPDATE 	${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"   
+echo -e " $COLOR1│$NC ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}TROJAN	${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}SYSTEM 	${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"
+echo -e " $COLOR1│$NC ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}NOOBZVPNS ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}BACKUP 	${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"
+echo -e " $COLOR1│$NC ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}BOT AKUN  ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}12${WH}]${NC} ${COLOR1}• ${WH}REBOOT 	${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"
+echo -e " $COLOR1│$NC ${WH}[${COLOR1}22${WH}]${NC} ${COLOR1}• ${WH}RUNNING   ${WH}[${COLOR1}Menu${WH}]   ${NC} $COLOR1│${NC}  ${WH}[${COLOR1}23${WH}]${NC} ${COLOR1}• ${WH}RESTART	${WH}[${COLOR1}Menu${WH}] $COLOR1│${NC}"
 echo -e " $COLOR1╰════════════════════════════════════════════════════════╯${NC}"
 if [ "$Isadmin" = "ON" ]; then
 echo -e "$COLOR1╭════════════════════ • ${WH}PANEL ADMIN VIP${NC}${COLOR1} • ════════════════╮${NC}"
@@ -451,8 +451,8 @@ ressee="menu"
 bottt="menu"
 fi
 echo -e "$COLOR1╭═════════════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1│$NC  ${WH}Total    $COLOR1│${NC}     ${WH}Today       ${WH}Yesterday       ${WH}Month         ${NC}"
-echo -e "$COLOR1│$NC ${WH}Bantwidth $COLOR1│${NC}   ${WH}$today_tx $today_txv     ${WH}$yesterday_tx $yesterday_txv      ${WH}$month_tx $month_txv$COLOR1${NC}"
+echo -e "$COLOR1│$NC  ${WH}Total	$COLOR1│${NC} 	${WH}Today   	${WH}Yesterday   	${WH}Month     	${NC}"
+echo -e "$COLOR1│$NC ${WH}Bantwidth $COLOR1│${NC}   ${WH}$today_tx $today_txv 	${WH}$yesterday_tx $yesterday_txv  	${WH}$month_tx $month_txv$COLOR1${NC}"
 echo -e "$COLOR1╰═════════════════════════════════════════════════════════╯${NC}"
 DATE=$(date +'%Y-%m-%d')
 datediff() {
@@ -515,52 +515,52 @@ menu
 function restartservice(){
 clear
 fun_bar() {
-    CMD[0]="$1"
-    CMD[1]="$2"
-    (
-        [[ -e $HOME/fim ]] && rm $HOME/fim
-        ${CMD[0]} -y >/dev/null 2>&1
-        ${CMD[1]} -y >/dev/null 2>&1
-        touch $HOME/fim
-    ) >/dev/null 2>&1 &
-    tput civis
-    echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    while true; do
-        for ((i = 0; i < 18; i++)); do
-            echo -ne "\033[0;32m#"
-            sleep 0.1s
-        done
-        [[ -e $HOME/fim ]] && rm $HOME/fim && break
-        echo -e "\033[0;33m]"
-        sleep 1s
-        tput cuu1
-        tput dl1
-        echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    done
-    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
-    tput cnorm
+	CMD[0]="$1"
+	CMD[1]="$2"
+	(
+    	[[ -e $HOME/fim ]] && rm $HOME/fim
+    	${CMD[0]} -y >/dev/null 2>&1
+    	${CMD[1]} -y >/dev/null 2>&1
+    	touch $HOME/fim
+	) >/dev/null 2>&1 &
+	tput civis
+	echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
+	while true; do
+    	for ((i = 0; i < 18; i++)); do
+        	echo -ne "\033[0;32m#"
+        	sleep 0.1s
+    	done
+    	[[ -e $HOME/fim ]] && rm $HOME/fim && break
+    	echo -e "\033[0;33m]"
+    	sleep 1s
+    	tput cuu1
+    	tput dl1
+    	echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
+	done
+	echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
+	tput cnorm
 }
 res1() {
-    systemctl restart nginx
-    systemctl restart xray
-    systemctl restart noobzvpns
-    systemctl restart daemon
-    systemctl restart udp-custom
-    systemctl restart ws-dropbear
-    systemctl restart ws-stunnel
-    systemctl restart openvpn
-    systemctl restart cron
-    systemctl restart netfilter-persistent
-    systemctl restart squid
-    systemctl restart badvpn1
-    systemctl restart badvpn2
-    systemctl restart badvpn3
-    systemctl restart client-sldns
-    systemctl restart server-sldns
+	systemctl restart nginx
+	systemctl restart xray
+	systemctl restart noobzvpns
+	systemctl restart daemon
+	systemctl restart udp-custom
+	systemctl restart ws-dropbear
+	systemctl restart ws-stunnel
+	systemctl restart openvpn
+	systemctl restart cron
+	systemctl restart netfilter-persistent
+	systemctl restart squid
+	systemctl restart badvpn1
+	systemctl restart badvpn2
+	systemctl restart badvpn3
+	systemctl restart client-sldns
+	systemctl restart server-sldns
 }
 clear
 echo -e "$COLOR1 ╭══════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}          ${WH}RESTART SERVICE VPS             ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}      	${WH}RESTART SERVICE VPS         	${NC} $COLOR1 $NC"
 echo -e "$COLOR1 ╰══════════════════════════════════════════╯${NC}"
 echo -e ""
 echo -e "  \033[1;91m Restart All Service... \033[1;37m"
@@ -573,7 +573,7 @@ menu
 function updatews(){
 cd
 rm -rf *
-wget https://raw.githubusercontent.com/okysmilee/install/main/menu/install-up.sh &> /dev/null
+wget https://raw.githubusercontent.com/titis69/instal/main/menu/install-up.sh &> /dev/null
 chmod +x install_up.sh
 ./install_up.sh
 }
