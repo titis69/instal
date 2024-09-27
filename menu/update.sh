@@ -4,33 +4,34 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 echo -e " [INFO] Downloading File"
 sleep 2
-wget -q -O /usr/bin/m-noobz "https://raw.githubusercontent.com/okysmilee/install/main/menu/m-noobz.sh" chmod +x /usr/bin/m-noobz
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/okysmilee/install/main/menu/menu.sh" && chmod +x /usr/bin/menu
-wget -q -O /usr/bin/m-ip "https://raw.githubusercontent.com/okysmilee/install/main/menu/m-ip.sh" && chmod +x /usr/bin/m-ip
-wget -q -O /usr/bin/m-bot "https://raw.githubusercontent.com/okysmilee/install/main/menu/m-bot.sh" && chmod +x /usr/bin/m-bot
-wget -q -O /usr/bin/update "https://raw.githubusercontent.com/okysmilee/install/main/menu/update.sh" && chmod +x /usr/bin/update
-wget -q -O /usr/bin/m-theme "https://raw.githubusercontent.com/okysmilee/install/main/menu/m-theme.sh" && chmod +x /usr/bin/m-theme
-wget -q -O /usr/bin/m-vmess "https://raw.githubusercontent.com/okysmilee/install/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
-wget -q -O /usr/bin/m-vless "https://raw.githubusercontent.com/okysmilee/install/main/menu/m-vless.sh" && chmod +x /usr/bin/m-vless
-wget -q -O /usr/bin/m-trojan "https://raw.githubusercontent.com/okysmilee/install/main/menu/m-trojan.sh" && chmod +x /usr/bin/m-trojan
-wget -q -O /usr/bin/m-system "https://raw.githubusercontent.com/okysmilee/install/main/menu/m-system.sh" && chmod +x /usr/bin/m-system
-wget -q -O /usr/bin/m-sshovpn "https://raw.githubusercontent.com/okysmilee/install/main/menu/m-sshovpn.sh" && chmod +x /usr/bin/m-sshovpn
-wget -q -O /usr/bin/m-ssws "https://raw.githubusercontent.com/okysmilee/install/main/menu/m-ssws.sh" && chmod +x /usr/bin/m-ssws
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/okysmilee/install/main/menu/running.sh" && chmod +x /usr/bin/running
-wget -q -O /usr/bin/m-backup "https://raw.githubusercontent.com/okysmilee/install/main/menu/m-backup.sh" && chmod +x /usr/bin/m-backup
-wget -q -O /usr/bin/m-update "https://raw.githubusercontent.com/okysmilee/install/main/menu/m-update.sh" && chmod +x /usr/bin/m-update
-wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/okysmilee/install/main/speedtest_cli.py" && chmod +x /usr/bin/speedtest
-wget -q -O /usr/bin/bckpbot "https://raw.githubusercontent.com/okysmilee/install/main/menu/bckpbot.sh" && chmod +x /usr/bin/bckpbot
-wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/okysmilee/install/main/menu/tendang.sh" && chmod +x /usr/bin/tendang
-wget -q -O /usr/bin/bottelegram "https://raw.githubusercontent.com/okysmilee/install/main/menu/bottelegram.sh" && chmod +x /usr/bin/bottelegram
-wget -q -O /usr/bin/m-allxray "https://raw.githubusercontent.com/okysmilee/install/main/menu/m-allxray.sh" && chmod +x /usr/bin/m-allxray
-wget -q -O /usr/bin/xraylimit "https://raw.githubusercontent.com/okysmilee/install/main/menu/xraylimit.sh" && chmod +x /usr/bin/xraylimit
-wget -q -O /usr/bin/trialvmess "https://raw.githubusercontent.com/okysmilee/install/main/menu/trialvmess.sh" && chmod +x /usr/bin/trialvmess
-wget -q -O /usr/bin/trialvless "https://raw.githubusercontent.com/okysmilee/install/main/menu/trialtrojan.sh" && chmod +x /usr/bin/trialtrojan
-wget -q -O /usr/bin/trialtrojan "https://raw.githubusercontent.com/okysmilee/install/main/menu/trialvless.sh" && chmod +x /usr/bin/trialvless
-wget -q -O /usr/bin/trialssh "https://raw.githubusercontent.com/okysmilee/install/main/menu/trialssh.sh" && chmod +x /usr/bin/trialssh
-wget -q -O /usr/bin/autocpu "https://raw.githubusercontent.com/okysmilee/install/main/install/autocpu.sh" && chmod +x /usr/bin/autocpu
-wget -q -O /usr/bin/bantwidth "https://raw.githubusercontent.com/okysmilee/install/main/install/bantwidth" && chmod +x /usr/bin/bantwidth
+wget -q -O /usr/bin/m-noobz "https://raw.githubusercontent.com/titis69/instal/main/menu/m-noobz.sh" chmod +x /usr/bin/m-noobz
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/titis69/instal/main/menu/menu.sh" && chmod +x /usr/bin/menu
+wget -q -O /usr/bin/m-ip "https://raw.githubusercontent.com/titis69/instal/main/menu/m-ip.sh" && chmod +x /usr/bin/m-ip
+wget -q -O /usr/bin/m-bot "https://raw.githubusercontent.com/titis69/instal/main/menu/m-bot.sh" && chmod +x /usr/bin/m-bot
+wget -q -O /usr/bin/update "https://raw.githubusercontent.com/titis69/instal/main/menu/update.sh" && chmod +x /usr/bin/update
+wget -q -O /usr/bin/m-theme "https://raw.githubusercontent.com/titis69/instal/main/menu/m-theme.sh" && chmod +x /usr/bin/m-theme
+wget -q -O /usr/bin/m-vmess "https://raw.githubusercontent.com/titis69/instal/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
+wget -q -O /usr/bin/m-vless "https://raw.githubusercontent.com/titis69/instal/main/menu/m-vless.sh" && chmod +x /usr/bin/m-vless
+wget -q -O /usr/bin/m-trojan "https://raw.githubusercontent.com/titis69/instal/main/menu/m-trojan.sh" && chmod +x /usr/bin/m-trojan
+wget -q -O /usr/bin/m-system "https://raw.githubusercontent.com/titis69/instal/main/menu/m-system.sh" && chmod +x /usr/bin/m-system
+wget -q -O /usr/bin/m-sshovpn "https://raw.githubusercontent.com/titis69/instal/main/menu/m-sshovpn.sh" && chmod +x /usr/bin/m-sshovpn
+wget -q -O /usr/bin/m-ssws "https://raw.githubusercontent.com/titis69/instal/main/menu/m-ssws.sh" && chmod +x /usr/bin/m-ssws
+wget -q -O /usr/bin/running "https://raw.githubusercontent.com/titis69/instal/main/menu/running.sh" && chmod +x /usr/bin/running
+wget -q -O /usr/bin/m-backup "https://raw.githubusercontent.com/titis69/instal/main/menu/m-backup.sh" && chmod +x /usr/bin/m-backup
+wget -q -O /usr/bin/m-update "https://raw.githubusercontent.com/titis69/instal/main/menu/m-update.sh" && chmod +x /usr/bin/m-update
+wget -q -O /usr/bin/speedtest "https://raw.githubusercontent.com/titis69/instal/main/speedtest_cli.py" && chmod +x /usr/bin/speedtest
+wget -q -O /usr/bin/bckpbot "https://raw.githubusercontent.com/titis69/instal/main/menu/bckpbot.sh" && chmod +x /usr/bin/bckpbot
+wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/titis69/instal/main/menu/tendang.sh" && chmod +x /usr/bin/tendang
+wget -q -O /usr/bin/bottelegram "https://raw.githubusercontent.com/titis69/instal/main/menu/bottelegram.sh" && chmod +x /usr/bin/bottelegram
+wget -q -O /usr/bin/m-allxray "https://raw.githubusercontent.com/titis69/instal/main/menu/m-allxray.sh" && chmod +x /usr/bin/m-allxray
+wget -q -O /usr/bin/xraylimit "https://raw.githubusercontent.com/titis69/instal/main/menu/xraylimit.sh" && chmod +x /usr/bin/xraylimit
+wget -q -O /usr/bin/trialvmess "https://raw.githubusercontent.com/titis69/instal/main/menu/trialvmess.sh" && chmod +x /usr/bin/trialvmess
+wget -q -O /usr/bin/trialvless "https://raw.githubusercontent.com/titis69/instal/main/menu/trialtrojan.sh" && chmod +x /usr/bin/trialtrojan
+wget -q -O /usr/bin/trialtrojan "https://raw.githubusercontent.com/titis69/instal/main/menu/trialvless.sh" && chmod +x /usr/bin/trialvless
+wget -q -O /usr/bin/trialssh "https://raw.githubusercontent.com/titis69/instal/main/menu/trialssh.sh" && chmod +x /usr/bin/trialssh
+wget -q -O /usr/bin/autocpu "https://raw.githubusercontent.com/titis69/instal/main/install/autocpu.sh" && chmod +x /usr/bin/autocpu
+wget -q -O /usr/bin/bantwidth "https://raw.githubusercontent.com/titis69/instal/main/install/bantwidth" && chmod +x /usr/bin/bantwidth
 echo -e " [INFO] Download File Successfully"
 sleep 2
 exit
+
