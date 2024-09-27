@@ -50,7 +50,7 @@ mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 clear
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}         	MASUKKAN NAMA KAMU     	${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}             MASUKKAN NAMA KAMU         ${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $name =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -67,11 +67,11 @@ echo ""
 function key2(){
 clear
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH} Please select a your Choice        	${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH} Please select a your Choice            ${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│  [ 1 ]  \033[1;37mTRIAL 1 HARI  	${NC}"
-echo -e "${LINECYAN}│  [ 2 ]  \033[1;37mMEMBER SUDAH BELI 	${NC}"
+echo -e "${LINECYAN}│  [ 1 ]  \033[1;37mTRIAL 1 HARI      ${NC}"
+echo -e "${LINECYAN}│  [ 2 ]  \033[1;37mMEMBER SUDAH BELI     ${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 until [[ $key =~ ^[12]+$ ]]; do
 read -p "   Please select numbers 1 atau 2 : " key
@@ -110,7 +110,7 @@ fi
 if [[ $key == "2" ]]; then
 clear
 echo -e  "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${LINECYAN}│          	MASUKKAN LICENSE KEY    	│${NC}"
+echo -e  "${LINECYAN}│              MASUKKAN LICENSE KEY        │${NC}"
 echo -e  "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 echo " "
 read -rp "Masukan Key Kamu Disini (Ctrl + C Exit) : " -e kode
@@ -325,7 +325,7 @@ echo -e "${LINECYAN}╭═══════════════════
 echo -e "${LINECYAN}│ \033[1;37mPlease select a your Choice to Set Domain${LINECYAN}│${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│  [ 1 ]  \033[1;37mDomain kamu sendiri   	${NC}"
+echo -e "${LINECYAN}│  [ 1 ]  \033[1;37mDomain kamu sendiri       ${NC}"
 echo -e "${LINECYAN}│  [ 2 ]  \033[1;37mDomain yang punya script  ${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 until [[ $domain =~ ^[132]+$ ]]; do
@@ -334,9 +334,9 @@ done
 if [[ $domain == "1" ]]; then
 clear
 echo -e  "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${LINECYAN}│          	\033[1;37mTERIMA KASIH            	${LINECYAN}│${NC}"
-echo -e  "${LINECYAN}│     	\033[1;37mSUDAH MENGGUNAKAN SCRIPT     	${LINECYAN}│${NC}"
-echo -e  "${LINECYAN}│            	\033[1;37m Admin SF             	${LINECYAN}│${NC}"
+echo -e  "${LINECYAN}│              \033[1;37mTERIMA KASIH                ${LINECYAN}│${NC}"
+echo -e  "${LINECYAN}│         \033[1;37mSUDAH MENGGUNAKAN SCRIPT         ${LINECYAN}│${NC}"
+echo -e  "${LINECYAN}│                \033[1;37m Admin SF                 ${LINECYAN}│${NC}"
 echo -e  "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $dnss =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -369,7 +369,7 @@ echo -e "${LINECYAN}╭═══════════════════
 echo -e "${LINECYAN}│ \033[1;37mPlease select a your Choice to Set Domain${LINECYAN}│${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│  [ 1 ]  \033[1;37mDomain xxx.tepllovpn.eu.org      	${NC}"                                   	 
+echo -e "${LINECYAN}│  [ 1 ]  \033[1;37mDomain xxx.tepllovpn.eu.org          ${NC}"                                        
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 until [[ $domain2 =~ ^[1-1]+$ ]]; do
 read -p "   Please select numbers 1 sampai 1 : " domain2
@@ -378,8 +378,8 @@ fi
 if [[ $domain2 == "1" ]]; then
 clear
 echo -e  "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${LINECYAN}│  \033[1;37mContoh subdomain xxx.tepllovpn.eu.org    	${LINECYAN}│${NC}"
-echo -e  "${LINECYAN}│	\033[1;37mxxx jadi subdomain kamu           	${LINECYAN}│${NC}"
+echo -e  "${LINECYAN}│  \033[1;37mContoh subdomain xxx.tepllovpn.eu.org        ${LINECYAN}│${NC}"
+echo -e  "${LINECYAN}│    \033[1;37mxxx jadi subdomain kamu               ${LINECYAN}│${NC}"
 echo -e  "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $dn1 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -408,8 +408,8 @@ rm /root/subdomainx
 elif [[ $domain2 == "2" ]]; then
 clear
 echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.vpnvip.app     	${tyblue}│${NC}"
-echo -e  "${tyblue}│	\033[1;37mxxx jadi subdomain kamu           	${tyblue}│${NC}"
+echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.vpnvip.app         ${tyblue}│${NC}"
+echo -e  "${tyblue}│    \033[1;37mxxx jadi subdomain kamu               ${tyblue}│${NC}"
 echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
 until [[ $dn2 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -438,8 +438,8 @@ rm /root/subdomainx
 elif [[ $domain2 == "3" ]]; then
 clear
 echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.slowapp.cfd    	${tyblue}│${NC}"
-echo -e  "${tyblue}│	\033[1;37mxxx jadi subdomain kamu           	${tyblue}│${NC}"
+echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.slowapp.cfd        ${tyblue}│${NC}"
+echo -e  "${tyblue}│    \033[1;37mxxx jadi subdomain kamu               ${tyblue}│${NC}"
 echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
 until [[ $dn3 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -690,52 +690,52 @@ clear
 }
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}  PROCESS INSTALLED SSH & OVVPN     	${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}  PROCESS INSTALLED SSH & OVVPN         ${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res2'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}   	PROCESS INSTALLED XRAY       	${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}       PROCESS INSTALLED XRAY           ${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res3'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}  	PROCESS INSTALLED WEBSOCKET SSH   ${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}      PROCESS INSTALLED WEBSOCKET SSH   ${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res4'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}  	PROCESS INSTALLED BACKUP MENU 	${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}      PROCESS INSTALLED BACKUP MENU     ${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res5'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}      	PROCESS INSTALLED OHP     	${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}          PROCESS INSTALLED OHP         ${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res6'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}      	DOWNLOAD EXTRA MENU       	${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}          DOWNLOAD EXTRA MENU           ${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res7'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}       	DOWNLOAD SLOW DNS        	${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}           DOWNLOAD SLOW DNS            ${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res8'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}      	DOWNLOAD UDP COSTUM       	${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}          DOWNLOAD UDP COSTUM           ${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res9'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}	PROCESS INSTALLED NOOBZVPNS     	${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}    PROCESS INSTALLED NOOBZVPNS         ${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res10'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}	PROCESS INSTALLED LIMIT XRAY    	${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}    PROCESS INSTALLED LIMIT XRAY        ${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res11'
 }
@@ -833,7 +833,7 @@ cd
 iinfo
 rm -rf *
 echo -e "${LINECYAN}╭════════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH} INSTALL SCRIPT SELESAI..             	${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH} INSTALL SCRIPT SELESAI..                 ${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰════════════════════════════════════════════╯${NC}"
 echo  ""
 sleep 4
