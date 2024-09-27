@@ -2,24 +2,24 @@
 ipsaya=$(curl -sS ipinfo.io/ip)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/okysmilee/permission/main/ip"
+data_ip="https://raw.githubusercontent.com/titis69/permission/main/ip"
 checking_sc() {
-    useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
-    if [[ $date_list < $useexp ]]; then
-        echo -ne
-    else
-        echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-        echo -e "$COLOR1 ${NC} ${COLBG1}          ${WH}• AUTOSCRIPT PREMIUM •               ${NC} $COLOR1 $NC"
-        echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
-        echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-        echo -e "            ${RED}PERMISSION DENIED !${NC}"
-        echo -e "   \033[0;33mYour VPS${NC} $ipsaya \033[0;33mHas been Banned${NC}"
-        echo -e "     \033[0;33mBuy access permissions for scripts${NC}"
-        echo -e "             \033[0;33mContact Your Admin ${NC}"
-        echo -e "     \033[0;36mTelegram${NC}: https://t.me/Swara1123"
-        echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
-        exit
-    fi
+	useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
+	if [[ $date_list < $useexp ]]; then
+    	echo -ne
+	else
+    	echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
+    	echo -e "$COLOR1 ${NC} ${COLBG1}      	${WH}• AUTOSCRIPT PREMIUM •           	${NC} $COLOR1 $NC"
+    	echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
+    	echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
+    	echo -e "        	${RED}PERMISSION DENIED !${NC}"
+    	echo -e "   \033[0;33mYour VPS${NC} $ipsaya \033[0;33mHas been Banned${NC}"
+    	echo -e " 	\033[0;33mBuy access permissions for scripts${NC}"
+    	echo -e "         	\033[0;33mContact Your Admin ${NC}"
+    	echo -e " 	\033[0;36mTelegram${NC}: https://t.me/Swara1123"
+    	echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
+    	exit
+	fi
 }
 checking_sc
 
@@ -35,13 +35,13 @@ apt install python3 python3-pip git speedtest-cli -y
 sudo apt-get install -y p7zip-full
 cd /usr/bin
 clear
-wget -q https://raw.githubusercontent.com/okysmilee/install/main/bot/bot.zip
+wget -q https://raw.githubusercontent.com/titis69/instal/main/bot/bot.zip
 unzip bot.zip
 mv bot/* /usr/bin
 chmod +x /usr/bin/*
 rm -rf bot.zip
 clear
-wget -q https://raw.githubusercontent.com/okysmilee/install/main/bot/kyt.zip
+wget -q https://raw.githubusercontent.com/titis69/instal/main/bot/kyt.zip
 unzip kyt.zip
 pip3 install -r kyt/requirements.txt
 clear
@@ -55,7 +55,7 @@ rm -rf /etc/tele
 
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}• BOT PANEL •                  ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}            	${WH}• BOT PANEL •              	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 echo -e "${grenbo}Tutorial Creat Bot and ID Telegram${NC}"
@@ -94,18 +94,18 @@ echo "*/1 * * * * root /usr/bin/cekbot" >>/etc/cron.d/cekbot
 cat > /usr/bin/cekbot << END
 nginx=$( systemctl status kyt | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $nginx == "running" ]]; then
-    echo -ne
+	echo -ne
 else
-    systemctl restart kyt
-    systemctl start kyt
+	systemctl restart kyt
+	systemctl start kyt
 fi
 
 kyt=$( systemctl status kyt | grep "TERM" | wc -l )
 if [[ $kyt == "0" ]]; then
 echo -ne
 else
-    systemctl restart kyt
-    systemctl start kyt
+	systemctl restart kyt
+	systemctl start kyt
 fi
 END
 
@@ -142,28 +142,28 @@ fi
 
 #isi data
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│ \033[1;37mPlease select a your Choice              $COLOR1│${NC}"
+echo -e "$COLOR1│ \033[1;37mPlease select a your Choice          	$COLOR1│${NC}"
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│  [ 1 ]  \033[1;37mGANTI BOT       ${NC}"
-echo -e "$COLOR1│  "                                        
-echo -e "$COLOR1│  [ 2 ]  \033[1;37mUPDATE BOT     ${NC}"
-echo -e "$COLOR1│  "                                        
-echo -e "$COLOR1│  [ 3 ]  \033[1;37mDELETE BOT     ${NC}"
-echo -e "$COLOR1│  "                                        
-echo -e "$COLOR1│  [ 4 ]  \033[1;37mGANTI NAMA PANGGILAN BOT (MULTI SERVER)     ${NC}"
-echo -e "$COLOR1│  "                                        
-echo -e "$COLOR1│  [ 5 ]  \033[1;37mTAMBAH ADMIN     ${NC}"
-echo -e "$COLOR1│  "                                        
+echo -e "$COLOR1│  [ 1 ]  \033[1;37mGANTI BOT   	${NC}"
+echo -e "$COLOR1│  "                                   	 
+echo -e "$COLOR1│  [ 2 ]  \033[1;37mUPDATE BOT 	${NC}"
+echo -e "$COLOR1│  "                                   	 
+echo -e "$COLOR1│  [ 3 ]  \033[1;37mDELETE BOT 	${NC}"
+echo -e "$COLOR1│  "                                   	 
+echo -e "$COLOR1│  [ 4 ]  \033[1;37mGANTI NAMA PANGGILAN BOT (MULTI SERVER) 	${NC}"
+echo -e "$COLOR1│  "                                   	 
+echo -e "$COLOR1│  [ 5 ]  \033[1;37mTAMBAH ADMIN 	${NC}"
+echo -e "$COLOR1│  "                                   	 
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
-until [[ $domain2 =~ ^[1-5]+$ ]]; do 
+until [[ $domain2 =~ ^[1-5]+$ ]]; do
 read -p "   Please select numbers 1 sampai 5 : " domain2
 done
 
 if [[ $domain2 == "1" ]]; then
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}• BOT PANEL •                  ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}            	${WH}• BOT PANEL •              	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 echo -e "${grenbo}Tutorial Creat Bot and ID Telegram${NC}"
@@ -219,13 +219,13 @@ rm -rf /usr/bin/kyt.zip
 rm -rf /usr/bin/kyt
 sleep 2
 cd /usr/bin
-wget -q https://raw.githubusercontent.com/okysmilee/install/main/bot/bot.zip
+wget -q https://raw.githubusercontent.com/titis69/instal/main/bot/bot.zip
 unzip bot.zip
 mv bot/* /usr/bin
 chmod +x /usr/bin/*
 rm -rf bot.zip
 clear
-wget -q https://raw.githubusercontent.com/okysmilee/install/main/bot/kyt.zip
+wget -q https://raw.githubusercontent.com/titis69/instal/main/bot/kyt.zip
 unzip kyt.zip
 pip3 install -r kyt/requirements.txt
 clear
@@ -260,7 +260,7 @@ fi
 if [[ $domain2 == "4" ]]; then
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}• BOT PANEL •                  ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}            	${WH}• BOT PANEL •              	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 echo -e "${grenbo}Ini digunakan jika Mau memakai 1bot saja tanpa perlu ${NC}"
@@ -312,7 +312,7 @@ fi
 if [[ $domain2 == "5" ]]; then
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}• BOT PANEL •                  ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}            	${WH}• BOT PANEL •              	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e ""
 read -e -p "[*] Input ID Usernya : " user
@@ -328,7 +328,10 @@ clear
 echo -e "Succes TAMBAH Admin BOT Telegram"
 rm -rf /usr/bin/ddsdswl.session
 rm -rf /usr/bin/kyt/database.db
-systemctl restart kyt 
+systemctl restart kyt
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 fi
+
+
+
