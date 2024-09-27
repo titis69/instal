@@ -1,7 +1,7 @@
 #!/bin/bash
 function CEKIP () {
 MYIP=$(curl -sS ipv4.icanhazip.com)
-IPVPS=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $4}')
+IPVPS=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $4}')
 if [[ $MYIP == $IPVPS ]]; then
 domain
 Casper2
@@ -50,7 +50,7 @@ mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 clear
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}             MASUKKAN NAMA KAMU         ${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}         	MASUKKAN NAMA KAMU     	${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $name =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -67,13 +67,13 @@ echo ""
 function key2(){
 clear
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH} Please select a your Choice            ${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH} Please select a your Choice        	${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│  [ 1 ]  \033[1;37mTRIAL 1 HARI      ${NC}"
-echo -e "${LINECYAN}│  [ 2 ]  \033[1;37mMEMBER SUDAH BELI     ${NC}"
+echo -e "${LINECYAN}│  [ 1 ]  \033[1;37mTRIAL 1 HARI  	${NC}"
+echo -e "${LINECYAN}│  [ 2 ]  \033[1;37mMEMBER SUDAH BELI 	${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
-until [[ $key =~ ^[12]+$ ]]; do 
+until [[ $key =~ ^[12]+$ ]]; do
 read -p "   Please select numbers 1 atau 2 : " key
 done
 if [[ $key == "1" ]]; then
@@ -90,14 +90,14 @@ USERGIT=$(cat /etc/github/username)
 hhari=$(date -d "1 days" +"%Y-%m-%d")
 mkdir /root/rmbl
 cd /root/rmbl
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip >/dev/null 2>&1
+wget https://raw.githubusercontent.com/titis69/permission/main/ip >/dev/null 2>&1
 echo "### $author $hhari $MYIP @trial" >> ip
 sleep 1
 rm -rf .git
 git config --global user.email "${EMAILGIT}" >/dev/null 2>&1
 git config --global user.name "${USERGIT}" >/dev/null 2>&1
 git init >/dev/null 2>&1
-git add ip 
+git add ip
 git commit -m register >/dev/null 2>&1
 git branch -M main >/dev/null 2>&1
 git remote add origin https://github.com/${USERGIT}/permission >/dev/null 2>&1
@@ -110,7 +110,7 @@ fi
 if [[ $key == "2" ]]; then
 clear
 echo -e  "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${LINECYAN}│              MASUKKAN LICENSE KEY        │${NC}"
+echo -e  "${LINECYAN}│          	MASUKKAN LICENSE KEY    	│${NC}"
 echo -e  "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 echo " "
 read -rp "Masukan Key Kamu Disini (Ctrl + C Exit) : " -e kode
@@ -119,11 +119,11 @@ if [ -z $kode ]; then
 echo -e "KODE SALAH SILAHKAN MASUKKAN ULANG KODENYA"
 key2
 fi
-LIST=$(curl -sS https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $2}')
-Key=$(curl -sS https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $3}')
-KEY2=$(curl -sS https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $4}')
-ADMIN=$(curl -sS https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $5}')
-TOTALIP=$(curl -sS https://raw.githubusercontent.com/okysmilee/license/main/key | grep $kode | awk '{print $6}')
+LIST=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $2}')
+Key=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $3}')
+KEY2=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $4}')
+ADMIN=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $5}')
+TOTALIP=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $6}')
 cd
 if [[ $kode == "RMBLVVIP" ]]; then
 MYIP=$(curl -sS ipv4.icanhazip.com)
@@ -139,7 +139,7 @@ USERGIT=$(cat /etc/github/username)
 hhari=$(date -d "30 days" +"%Y-%m-%d")
 mkdir /root/rmbl
 cd /root/rmbl
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip >/dev/null 2>&1
+wget https://raw.githubusercontent.com/titis69/permission/main/ip >/dev/null 2>&1
 
 echo "### $author $hhari $MYIP @RMBL" >> ip
 
@@ -148,7 +148,7 @@ rm -rf .git
 git config --global user.email "${EMAILGIT}" >/dev/null 2>&1
 git config --global user.name "${USERGIT}" >/dev/null 2>&1
 git init >/dev/null 2>&1
-git add ip 
+git add ip
 git commit -m register >/dev/null 2>&1
 git branch -M main >/dev/null 2>&1
 git remote add origin https://github.com/${USERGIT}/permission >/dev/null 2>&1
@@ -170,7 +170,7 @@ USERGIT=$(cat /etc/github/username)
 hhari2=$(date -d "999 days" +"%Y-%m-%d")
 mkdir /root/rmbl
 cd /root/rmbl
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip >/dev/null 2>&1
+wget https://raw.githubusercontent.com/titis69/permission/main/ip >/dev/null 2>&1
 
 sed -i "/# VIP/a ### ${author2} ${hhari2} ${MYIP2} ON 999 VIP" /root/rmbl/ip
 
@@ -179,7 +179,7 @@ rm -rf .git
 git config --global user.email "${EMAILGIT}" >/dev/null 2>&1
 git config --global user.name "${USERGIT}" >/dev/null 2>&1
 git init >/dev/null 2>&1
-git add ip 
+git add ip
 git commit -m register >/dev/null 2>&1
 git branch -M main >/dev/null 2>&1
 git remote add origin https://github.com/${USERGIT}/permission >/dev/null 2>&1
@@ -201,7 +201,7 @@ USERGIT=$(cat /etc/github/username)
 hhari3=$(date -d "999 days" +"%Y-%m-%d")
 mkdir /root/rmbl
 cd /root/rmbl
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip >/dev/null 2>&1
+wget https://raw.githubusercontent.com/titis69/permission/main/ip >/dev/null 2>&1
 
 sed -i "/# RESELLER/a ### ${author3} ${hhari3} ${MYIP3} ON 999" /root/rmbl/ip
 
@@ -210,7 +210,7 @@ rm -rf .git
 git config --global user.email "${EMAILGIT}" >/dev/null 2>&1
 git config --global user.name "${USERGIT}" >/dev/null 2>&1
 git init >/dev/null 2>&1
-git add ip 
+git add ip
 git commit -m register >/dev/null 2>&1
 git branch -M main >/dev/null 2>&1
 git remote add origin https://github.com/${USERGIT}/permission >/dev/null 2>&1
@@ -231,7 +231,7 @@ USERGIT=$(cat /etc/github/username)
 hhari=$(date -d "$KEY2 days" +"%Y-%m-%d")
 mkdir /root/rmbl
 cd /root/rmbl
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip >/dev/null 2>&1
+wget https://raw.githubusercontent.com/titis69/permission/main/ip >/dev/null 2>&1
 if [ "$ADMIN" = "ON" ]; then
 sed -i "/# RESELLER/a ### ${author} ${hhari} ${MYIP} ${ADMIN} ${TOTALIP}" /root/rmbl/ip
 else
@@ -243,14 +243,14 @@ rm -rf .git
 git config --global user.email "${EMAILGIT}" >/dev/null 2>&1
 git config --global user.name "${USERGIT}" >/dev/null 2>&1
 git init >/dev/null 2>&1
-git add ip 
+git add ip
 git commit -m register >/dev/null 2>&1
 git branch -M main >/dev/null 2>&1
 git remote add origin https://github.com/${USERGIT}/permission >/dev/null 2>&1
 git push -f https://${APIGIT}@github.com/${USERGIT}/permission >/dev/null 2>&1
 sleep 0.5
 rm ip
-wget https://raw.githubusercontent.com/okysmilee/license/main/key >/dev/null 2>&1
+wget https://raw.githubusercontent.com/titis69/license/main/key >/dev/null 2>&1
 if [ "$ADMIN" = "ON" ]; then
 sed -i "/^### $LIST $Key $KEY2 $ADMIN $TOTALIP/d" /root/rmbl/key
 else
@@ -278,33 +278,33 @@ fi
 }
 function domain(){
 fun_bar() {
-    CMD[0]="$1"
-    CMD[1]="$2"
-    (
-        [[ -e $HOME/fim ]] && rm $HOME/fim
-        ${CMD[0]} -y >/dev/null 2>&1
-        ${CMD[1]} -y >/dev/null 2>&1
-        touch $HOME/fim
-    ) >/dev/null 2>&1 &
-    tput civis
-    echo -ne "  \033[0;33mUpdate Domain.. \033[1;37m- \033[0;33m["
-    while true; do
-        for ((i = 0; i < 18; i++)); do
-            echo -ne "\033[0;32m#"
-            sleep 0.1s
-        done
-        [[ -e $HOME/fim ]] && rm $HOME/fim && break
-        echo -e "\033[0;33m]"
-        sleep 1s
-        tput cuu1
-        tput dl1
-        echo -ne "  \033[0;33mUpdate Domain... \033[1;37m- \033[0;33m["
-    done
-    echo -e "\033[0;33m]\033[1;37m -\033[1;32m Succes !\033[1;37m"
-    tput cnorm
+	CMD[0]="$1"
+	CMD[1]="$2"
+	(
+    	[[ -e $HOME/fim ]] && rm $HOME/fim
+    	${CMD[0]} -y >/dev/null 2>&1
+    	${CMD[1]} -y >/dev/null 2>&1
+    	touch $HOME/fim
+	) >/dev/null 2>&1 &
+	tput civis
+	echo -ne "  \033[0;33mUpdate Domain.. \033[1;37m- \033[0;33m["
+	while true; do
+    	for ((i = 0; i < 18; i++)); do
+        	echo -ne "\033[0;32m#"
+        	sleep 0.1s
+    	done
+    	[[ -e $HOME/fim ]] && rm $HOME/fim && break
+    	echo -e "\033[0;33m]"
+    	sleep 1s
+    	tput cuu1
+    	tput dl1
+    	echo -ne "  \033[0;33mUpdate Domain... \033[1;37m- \033[0;33m["
+	done
+	echo -e "\033[0;33m]\033[1;37m -\033[1;32m Succes !\033[1;37m"
+	tput cnorm
 }
 res1() {
-wget --no-check-certificate https://raw.githubusercontent.com/okysmilee/install/main/install/rmbl.sh && chmod +x rmbl.sh && ./rmbl.sh
+wget --no-check-certificate https://raw.githubusercontent.com/titis69/instal/main/install/rmbl.sh && chmod +x rmbl.sh && ./rmbl.sh
 clear
 }
 res2() {
@@ -325,21 +325,21 @@ echo -e "${LINECYAN}╭═══════════════════
 echo -e "${LINECYAN}│ \033[1;37mPlease select a your Choice to Set Domain${LINECYAN}│${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│  [ 1 ]  \033[1;37mDomain kamu sendiri       ${NC}"
+echo -e "${LINECYAN}│  [ 1 ]  \033[1;37mDomain kamu sendiri   	${NC}"
 echo -e "${LINECYAN}│  [ 2 ]  \033[1;37mDomain yang punya script  ${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
-until [[ $domain =~ ^[132]+$ ]]; do 
+until [[ $domain =~ ^[132]+$ ]]; do
 read -p "   Please select numbers 1  atau 2 : " domain
 done
 if [[ $domain == "1" ]]; then
 clear
 echo -e  "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${LINECYAN}│              \033[1;37mTERIMA KASIH                ${LINECYAN}│${NC}"
-echo -e  "${LINECYAN}│         \033[1;37mSUDAH MENGGUNAKAN SCRIPT         ${LINECYAN}│${NC}"
-echo -e  "${LINECYAN}│                \033[1;37m Admin SF                 ${LINECYAN}│${NC}"
+echo -e  "${LINECYAN}│          	\033[1;37mTERIMA KASIH            	${LINECYAN}│${NC}"
+echo -e  "${LINECYAN}│     	\033[1;37mSUDAH MENGGUNAKAN SCRIPT     	${LINECYAN}│${NC}"
+echo -e  "${LINECYAN}│            	\033[1;37m Admin SF             	${LINECYAN}│${NC}"
 echo -e  "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 echo " "
-until [[ $dnss =~ ^[a-zA-Z0-9_.-]+$ ]]; do 
+until [[ $dnss =~ ^[a-zA-Z0-9_.-]+$ ]]; do
 read -rp "Masukan domain kamu Disini : " -e dnss
 done
 rm -rf /etc/xray
@@ -369,17 +369,17 @@ echo -e "${LINECYAN}╭═══════════════════
 echo -e "${LINECYAN}│ \033[1;37mPlease select a your Choice to Set Domain${LINECYAN}│${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│  [ 1 ]  \033[1;37mDomain xxx.tepllovpn.eu.org          ${NC}"                                        
+echo -e "${LINECYAN}│  [ 1 ]  \033[1;37mDomain xxx.tepllovpn.eu.org      	${NC}"                                   	 
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
-until [[ $domain2 =~ ^[1-1]+$ ]]; do 
+until [[ $domain2 =~ ^[1-1]+$ ]]; do
 read -p "   Please select numbers 1 sampai 1 : " domain2
 done
 fi
 if [[ $domain2 == "1" ]]; then
 clear
 echo -e  "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e  "${LINECYAN}│  \033[1;37mContoh subdomain xxx.tepllovpn.eu.org        ${LINECYAN}│${NC}"
-echo -e  "${LINECYAN}│    \033[1;37mxxx jadi subdomain kamu               ${LINECYAN}│${NC}"
+echo -e  "${LINECYAN}│  \033[1;37mContoh subdomain xxx.tepllovpn.eu.org    	${LINECYAN}│${NC}"
+echo -e  "${LINECYAN}│	\033[1;37mxxx jadi subdomain kamu           	${LINECYAN}│${NC}"
 echo -e  "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 echo " "
 until [[ $dn1 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -408,8 +408,8 @@ rm /root/subdomainx
 elif [[ $domain2 == "2" ]]; then
 clear
 echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.vpnvip.app         ${tyblue}│${NC}"
-echo -e  "${tyblue}│    \033[1;37mxxx jadi subdomain kamu               ${tyblue}│${NC}"
+echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.vpnvip.app     	${tyblue}│${NC}"
+echo -e  "${tyblue}│	\033[1;37mxxx jadi subdomain kamu           	${tyblue}│${NC}"
 echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
 until [[ $dn2 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -438,8 +438,8 @@ rm /root/subdomainx
 elif [[ $domain2 == "3" ]]; then
 clear
 echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.slowapp.cfd        ${tyblue}│${NC}"
-echo -e  "${tyblue}│    \033[1;37mxxx jadi subdomain kamu               ${tyblue}│${NC}"
+echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.slowapp.cfd    	${tyblue}│${NC}"
+echo -e  "${tyblue}│	\033[1;37mxxx jadi subdomain kamu           	${tyblue}│${NC}"
 echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
 until [[ $dn3 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -468,8 +468,8 @@ rm /root/subdomainx
 elif [[ $domain2 == "4" ]]; then
 clear
 echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.slowapp.dev        ${tyblue}│${NC}"
-echo -e  "${tyblue}│    \033[1;37mxxx jadi subdomain kamu               ${tyblue}│${NC}"
+echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.slowapp.dev    	${tyblue}│${NC}"
+echo -e  "${tyblue}│	\033[1;37mxxx jadi subdomain kamu           	${tyblue}│${NC}"
 echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
 until [[ $dn4 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -498,8 +498,8 @@ rm /root/subdomainx
 elif [[ $domain2 == "5" ]]; then
 clear
 echo -e  "${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.vipnvip.tech       ${tyblue}│${NC}"
-echo -e  "${tyblue}│    \033[1;37mxxx jadi subdomain kamu               ${tyblue}│${NC}"
+echo -e  "${tyblue}│  \033[1;37mContoh subdomain xxx.vipnvip.tech   	${tyblue}│${NC}"
+echo -e  "${tyblue}│	\033[1;37mxxx jadi subdomain kamu           	${tyblue}│${NC}"
 echo -e  "${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
 until [[ $dn4 =~ ^[a-zA-Z0-9_.-]+$ ]]; do
@@ -592,8 +592,8 @@ sudo systemctl enable atd
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
 clear
-wget --no-check-certificate https://raw.githubusercontent.com/okysmilee/install/main/tools.sh &> /dev/null
-chmod +x tools.sh 
+wget --no-check-certificate https://raw.githubusercontent.com/titis69/instal/main/tools.sh &> /dev/null
+chmod +x tools.sh
 bash tools.sh
 clear
 start=$(date +%s)
@@ -603,75 +603,75 @@ apt install python -y >/dev/null 2>&1
 }
 function Casper3(){
 fun_bar() {
-    CMD[0]="$1"
-    CMD[1]="$2"
-    (
-        [[ -e $HOME/fim ]] && rm $HOME/fim
-        ${CMD[0]} -y >/dev/null 2>&1
-        ${CMD[1]} -y >/dev/null 2>&1
-        touch $HOME/fim
-    ) >/dev/null 2>&1 &
-    tput civis
-    echo -ne "  \033[0;33mLagi Menginstal File \033[1;37m- \033[0;33m["
-    while true; do
-        for ((i = 0; i < 18; i++)); do
-            echo -ne "\033[0;32m#"
-            sleep 0.1s
-        done
-        [[ -e $HOME/fim ]] && rm $HOME/fim && break
-        echo -e "\033[0;33m]"
-        sleep 1s
-        tput cuu1
-        tput dl1
-        echo -ne "  \033[0;33mLagi Menginstal File \033[1;37m- \033[0;33m["
-    done
-    echo -e "\033[0;33m]\033[1;37m -\033[1;32m Succes !\033[1;37m"
-    tput cnorm
+	CMD[0]="$1"
+	CMD[1]="$2"
+	(
+    	[[ -e $HOME/fim ]] && rm $HOME/fim
+    	${CMD[0]} -y >/dev/null 2>&1
+    	${CMD[1]} -y >/dev/null 2>&1
+    	touch $HOME/fim
+	) >/dev/null 2>&1 &
+	tput civis
+	echo -ne "  \033[0;33mLagi Menginstal File \033[1;37m- \033[0;33m["
+	while true; do
+    	for ((i = 0; i < 18; i++)); do
+        	echo -ne "\033[0;32m#"
+        	sleep 0.1s
+    	done
+    	[[ -e $HOME/fim ]] && rm $HOME/fim && break
+    	echo -e "\033[0;33m]"
+    	sleep 1s
+    	tput cuu1
+    	tput dl1
+    	echo -ne "  \033[0;33mLagi Menginstal File \033[1;37m- \033[0;33m["
+	done
+	echo -e "\033[0;33m]\033[1;37m -\033[1;32m Succes !\033[1;37m"
+	tput cnorm
 }
 
 
 res2() {
-wget --no-check-certificate https://raw.githubusercontent.com/okysmilee/install/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget --no-check-certificate https://raw.githubusercontent.com/titis69/instal/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
-} 
+}
 
 res3() {
-wget --no-check-certificate https://raw.githubusercontent.com/okysmilee/install/main/install/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget --no-check-certificate https://raw.githubusercontent.com/titis69/instal/main/install/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
 }
 
 res4() {
-wget --no-check-certificate https://raw.githubusercontent.com/okysmilee/install/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget --no-check-certificate https://raw.githubusercontent.com/titis69/instal/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 }
 
 res5() {
-wget --no-check-certificate https://raw.githubusercontent.com/okysmilee/install/main/install/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget --no-check-certificate https://raw.githubusercontent.com/titis69/instal/main/install/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 clear
 }
 
 res6() {
-wget --no-check-certificate https://raw.githubusercontent.com/okysmilee/install/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget --no-check-certificate https://raw.githubusercontent.com/titis69/instal/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
 }
 
 res7() {
-wget --no-check-certificate https://raw.githubusercontent.com/okysmilee/install/main/menu/update.sh && chmod +x update.sh && ./update.sh
+wget --no-check-certificate https://raw.githubusercontent.com/titis69/instal/main/menu/update.sh && chmod +x update.sh && ./update.sh
 clear
 }
 
 res8() {
-wget --no-check-certificate https://raw.githubusercontent.com/okysmilee/slowdns/main/installsl.sh && chmod +x installsl.sh && bash installsl.sh
+wget --no-check-certificate https://raw.githubusercontent.com/titis69/slowdns/main/installsl.sh && chmod +x installsl.sh && bash installsl.sh
 clear
 }
 
 res9() {
-wget --no-check-certificate https://raw.githubusercontent.com/okysmilee/install/main/install/udp-custom.sh && chmod +x udp-custom.sh && bash udp-custom.sh
+wget --no-check-certificate https://raw.githubusercontent.com/titis69/instal/main/install/udp-custom.sh && chmod +x udp-custom.sh && bash udp-custom.sh
 clear
 }
 
 res10() {
-wget --no-check-certificate https://raw.githubusercontent.com/SatanTech/noobz/main/noobzvpns.zip
+wget --no-check-certificate https://raw.githubusercontent.com/titis69/noobz/main/noobzvpns.zip
 unzip noobzvpns.zip
 chmod +x noobzvpns/*
 cd noobzvpns
@@ -684,58 +684,58 @@ clear
 }
 
 res11() {
-wget https://raw.githubusercontent.com/SatanTech/hm/main/limit/limit.sh && chmod +x limit.sh && ./limit.sh
+wget https://raw.githubusercontent.com/titis69/hm/main/limit/limit.sh && chmod +x limit.sh && ./limit.sh
 rm -rf limit.sh
 clear
 }
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}  PROCESS INSTALLED SSH & OVVPN         ${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}  PROCESS INSTALLED SSH & OVVPN     	${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res2'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}       PROCESS INSTALLED XRAY           ${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}   	PROCESS INSTALLED XRAY       	${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res3'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}      PROCESS INSTALLED WEBSOCKET SSH   ${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}  	PROCESS INSTALLED WEBSOCKET SSH   ${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res4'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}      PROCESS INSTALLED BACKUP MENU     ${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}  	PROCESS INSTALLED BACKUP MENU 	${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res5'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}          PROCESS INSTALLED OHP         ${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}      	PROCESS INSTALLED OHP     	${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res6'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}          DOWNLOAD EXTRA MENU           ${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}      	DOWNLOAD EXTRA MENU       	${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res7'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}           DOWNLOAD SLOW DNS            ${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}       	DOWNLOAD SLOW DNS        	${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res8'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}          DOWNLOAD UDP COSTUM           ${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}      	DOWNLOAD UDP COSTUM       	${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res9'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}    PROCESS INSTALLED NOOBZVPNS         ${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}	PROCESS INSTALLED NOOBZVPNS     	${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res10'
 
 echo -e "${LINECYAN}╭══════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH}    PROCESS INSTALLED LIMIT XRAY        ${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH}	PROCESS INSTALLED LIMIT XRAY    	${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰══════════════════════════════════════════╯${NC}"
 fun_bar 'res11'
 }
@@ -748,12 +748,12 @@ KEY="6046516548:AAFiAPQMjmZPs_iWkjtjgzMd7V11y3zvkDE"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 ISP=$(cat /etc/xray/isp)
 CITY=$(cat /etc/xray/city)
-domain=$(cat /etc/xray/domain) 
+domain=$(cat /etc/xray/domain)
 TIME=$(date +'%Y-%m-%d %H:%M:%S')
 RAMMS=$(free -m | awk 'NR==2 {print $2}')
 MODEL2=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
 MYIP=$(curl -sS ipv4.icanhazip.com)
-IZIN=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $3}' )
+IZIN=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $3}' )
 d1=$(date -d "$IZIN" +%s)
 d2=$(date -d "$today" +%s)
 EXP=$(( (d1 - d2) / 86400 ))
@@ -800,7 +800,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/okysmilee/install/main/versi  )
+serverV=$( curl -sS https://raw.githubusercontent.com/titis69/instal/main/versi  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
@@ -833,7 +833,7 @@ cd
 iinfo
 rm -rf *
 echo -e "${LINECYAN}╭════════════════════════════════════════════╮${NC}"
-echo -e "${LINECYAN}│ ${BGCYAN}${WH} INSTALL SCRIPT SELESAI..                 ${NC}${LINECYAN} │${NC}"
+echo -e "${LINECYAN}│ ${BGCYAN}${WH} INSTALL SCRIPT SELESAI..             	${NC}${LINECYAN} │${NC}"
 echo -e "${LINECYAN}╰════════════════════════════════════════════╯${NC}"
 echo  ""
 sleep 4
