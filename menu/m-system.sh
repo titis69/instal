@@ -9,7 +9,7 @@ WH='\033[1;37m'
 ipsaya=$(wget -qO- ifconfig.me)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/okysmilee/permission/main/ip"
+data_ip="https://raw.githubusercontent.com/titis69/permission/main/ip"
 checking_sc() {
 useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
 if [[ $date_list < $useexp ]]; then
@@ -71,18 +71,18 @@ echo -e "\033[0;33m]\033[1;37m -\033[1;32m Succes !\033[1;37m"
 tput cnorm
 }
 sldns() {
-wget -q https://raw.githubusercontent.com/okysmilee/slowdns/main/installsl.sh && chmod +x installsl.sh && ./installsl.sh
+wget -q https://raw.githubusercontent.com/titis69/slowdns/main/installsl.sh && chmod +x installsl.sh && ./installsl.sh
 }
 res1() {
-wget -q https://raw.githubusercontent.com/okysmilee/slowdns/main/rmbl.sh && chmod +x rmbl.sh && ./rmbl.sh
+wget -q https://raw.githubusercontent.com/titis69/slowdns/main/rmbl.sh && chmod +x rmbl.sh && ./rmbl.sh
 clear
 }
 res2() {
-wget -q https://raw.githubusercontent.com/okysmilee/slowdns/main/rmbl1.sh && chmod +x rmbl1.sh && ./rmbl1.sh
+wget -q https://raw.githubusercontent.com/titis69/slowdns/main/rmbl1.sh && chmod +x rmbl1.sh && ./rmbl1.sh
 clear
 }
 res3() {
-wget -q https://raw.githubusercontent.com/okysmilee/slowdns/main/rmbl2.sh && chmod +x rmbl2.sh && ./rmbl2.sh
+wget -q https://raw.githubusercontent.com/titis69/slowdns/main/rmbl2.sh && chmod +x rmbl2.sh && ./rmbl2.sh
 clear
 }
 clear
