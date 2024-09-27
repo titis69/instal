@@ -10,8 +10,8 @@ COLBG1="$(cat /etc/rmbl/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g
 WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}             	${WH}⇱ UPDATE ⇲                	${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}         	${WH}⇱ SCRIPT TERBARU ⇲            	${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}                 ${WH}⇱ UPDATE ⇲                    ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}⇱ SCRIPT TERBARU ⇲                ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 
 
