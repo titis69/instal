@@ -8,7 +8,7 @@ WH='\033[1;37m'
 ipsaya=$(wget -qO- ipinfo.io/ip)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/okysmilee/permission/main/ip"
+data_ip="https://raw.githubusercontent.com/titis69/permission/main/ip"
 checking_sc() {
 useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
 if [[ $date_list < $useexp ]]; then
@@ -16,13 +16,13 @@ echo -ne
 else
 systemctl stop nginx
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1│${NC}${COLBG1}          ${WH}• AUTOSCRIPT PREMIUM •                 ${NC}$COLOR1│ $NC"
+echo -e "$COLOR1│${NC}${COLBG1}      	${WH}• AUTOSCRIPT PREMIUM •             	${NC}$COLOR1│ $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1│            ${RED}PERMISSION DENIED !${NC}                  $COLOR1│"
-echo -e "$COLOR1│   ${yl}Your VPS${NC} $ipsaya \033[0;36mHas been Banned${NC}      $COLOR1│"
-echo -e "$COLOR1│     ${yl}Buy access permissions for scripts${NC}          $COLOR1│"
-echo -e "$COLOR1│             \033[0;32mContact Your Admin ${NC}                 $COLOR1│"
+echo -e "$COLOR1│        	${RED}PERMISSION DENIED !${NC}              	$COLOR1│"
+echo -e "$COLOR1│   ${yl}Your VPS${NC} $ipsaya \033[0;36mHas been Banned${NC}  	$COLOR1│"
+echo -e "$COLOR1│ 	${yl}Buy access permissions for scripts${NC}      	$COLOR1│"
+echo -e "$COLOR1│         	\033[0;32mContact Your Admin ${NC}             	$COLOR1│"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 exit
 fi
@@ -30,8 +30,8 @@ fi
 checking_sc
 rm -rf /root/casper >/dev/null
 MYIP=$(curl -sS ipv4.icanhazip.com)
-listuser=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-superadmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $7}')
+listuser=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+superadmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $7}')
 uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
 author=$(cat /etc/profil)
 userscript=$(curl -sS https://pastebin.com/raw/UUMpYn3w | awk '{print $1}')
@@ -42,18 +42,18 @@ emailkey=$(curl -sS https://pastebin.com/raw/UUMpYn3w | awk '{print $2}')
 tokenkey=$(curl -sS https://pastebin.com/raw/UUMpYn3w | awk '{print $3}')
 function tambahip2(){
 author=$(cat /etc/profil)
-superadmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $7}')
+superadmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $7}')
 if [ "$superadmin" = "VIP" ]; then
 tambahip
 else
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1│${NC}${COLBG1}          ${WH}• PREMIUM SUPER ADMIN •                ${NC}$COLOR1│ $NC"
+echo -e "$COLOR1│${NC}${COLBG1}      	${WH}• PREMIUM SUPER ADMIN •            	${NC}$COLOR1│ $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1│${NC}   [INFO] Kamu Bukan Super Admin                 $COLOR1│"
+echo -e "$COLOR1│${NC}   [INFO] Kamu Bukan Super Admin             	$COLOR1│"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -62,11 +62,11 @@ fi
 }
 function gantiip2(){
 author=$(cat /etc/profil)
-superadmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $7}')
+superadmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $7}')
 if [ "$superadmin" = "VIP" ]; then
 mkdir /root/rmbl
 cd /root/rmbl/ &> /dev/null
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip &> /dev/null
+wget https://raw.githubusercontent.com/titis69/permission/main/ip &> /dev/null
 data=( `cat /root/rmbl/ip | grep '###' | cut -d ' ' -f 4 | sort | uniq`);
 now=`date +"%Y-%m-%d"`
 for user in "${data[@]}"
@@ -86,17 +86,17 @@ git init &> /dev/null
 git add ip
 git commit -m remove &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/okysmilee/permission.git &> /dev/null
-git push -f https://${tokenscript}@github.com/okysmilee/permission.git &> /dev/null
+git remote add origin https://github.com/titis69/permission.git &> /dev/null
+git push -f https://${tokenscript}@github.com/titis69/permission.git &> /dev/null
 else
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1│${NC}${COLBG1}          ${WH}• PREMIUM SUPER ADMIN •                ${NC}$COLOR1│ $NC"
+echo -e "$COLOR1│${NC}${COLBG1}      	${WH}• PREMIUM SUPER ADMIN •            	${NC}$COLOR1│ $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1│${NC}   [INFO] Kamu Bukan Super Admin                 $COLOR1│"
+echo -e "$COLOR1│${NC}   [INFO] Kamu Bukan Super Admin             	$COLOR1│"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -105,15 +105,15 @@ fi
 }
 function add_ip(){
 clear
-nama2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
+nama2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
 author=$(cat /etc/profil)
 TIMES="10"
 CHATID=$(cat /etc/per/id)
 KEY=$(cat /etc/per/token)
 URL="https://api.telegram.org/bot$KEY/sendMessage"
-superadmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $7}')
+superadmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $7}')
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           	${WH}• REGISTER IPVPS •          	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 cd
@@ -123,12 +123,12 @@ read -p "   MASUKKAN IPNYA: " daftar
 echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Checking the IPVPS!"
 sleep 1
-REQIP=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | awk '{print $4}' | grep $daftar)
+REQIP=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | awk '{print $4}' | grep $daftar)
 if [[ $daftar = $REQIP ]]; then
 echo -e "$COLOR1 ${NC}  [INFO] VPS IP Already Registered!!"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e ""
 cd
@@ -143,7 +143,7 @@ clear
 fi
 done
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           	${WH}• REGISTER IPVPS •          	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 until [[ $client =~ ^[a-zA-Z0-9_]+$ ]]; do
@@ -154,7 +154,7 @@ cd
 echo -e "$COLOR1 ${NC}  [INFO] Please Input client"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -173,7 +173,7 @@ if [ -z $hari ]; then
 echo -e "$COLOR1 ${NC}   [INFO] Please Input exp date"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -200,18 +200,18 @@ esac
 done
 fi
 MYIP=$(curl -sS ipv4.icanhazip.com)
-U2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-U3=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $3}')
-U4=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $4}')
-U5=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $5}')
-U6=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $6}')
+U2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+U3=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $3}')
+U4=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $4}')
+U5=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $5}')
+U6=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $6}')
 exp=$(date -d "$hari days" +"%Y-%m-%d")
 hariini=$(date -d "0 days" +"%Y-%m-%d")
 git config --global user.email "${emailscript}" &> /dev/null
 git config --global user.name "${userscript}" &> /dev/null
 mkdir /root/rmbl
 cd /root/rmbl
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip &> /dev/null
+wget https://raw.githubusercontent.com/titis69/permission/main/ip &> /dev/null
 ws=1
 keyip=$(expr "$U6" - "$ws")
 sed -i "s/### $U2 $U3 $U4 $U5 $U6/### $U2 $U3 $U4 $U5 ${keyip}/g" ip
@@ -225,15 +225,15 @@ git init &> /dev/null
 git add ip
 git commit -m register &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/okysmilee/permission &> /dev/null
-git push -f https://${tokenscript}@github.com/okysmilee/permission &> /dev/null
+git remote add origin https://github.com/titis69/permission &> /dev/null
+git push -f https://${tokenscript}@github.com/titis69/permission &> /dev/null
 sleep 1
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$hariini" +%s)
 certificate=$(( (d1 - d2) / 86400 ))
 clear
 echo -e "$COLOR1╭════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}      ${WH}• REGISTER IPVPS •      ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}  	${WH}• REGISTER IPVPS •  	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC}  Client IP Register Successfully"
@@ -241,9 +241,9 @@ echo -e "$COLOR1 ${NC}"
 echo -e "$COLOR1 ${NC}  Client Name   : $client"
 if [ "$superadmin" = "VIP" ]; then
 echo -e "$COLOR1 ${NC}  Admin Panel   : $isadmin"
-echo -e "$COLOR1 ${NC}  JUMLAH IP    : $wip IP"
+echo -e "$COLOR1 ${NC}  JUMLAH IP	: $wip IP"
 fi
-echo -e "$COLOR1 ${NC}  IP VPS        : $daftar"
+echo -e "$COLOR1 ${NC}  IP VPS    	: $daftar"
 echo -e "$COLOR1 ${NC}  Register Date : $hariini"
 echo -e "$COLOR1 ${NC}  Expired Date  : $exp"
 echo -e "$COLOR1 ${NC}  Durasi Script  : $certificate Days"
@@ -273,7 +273,7 @@ rm -rf /root/rmbl >/dev/null
 rm -rf /etc/github
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════ ${WH}BY${NC} ${COLOR1}═══════════════╮${NC}"
-echo -e "$COLOR1 ${NC}             ${WH}• $author •${NC}               $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}         	${WH}• $author •${NC}           	$COLOR1 $NC"
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -281,21 +281,21 @@ m-ip
 }
 function genkey(){
 clear
-nama2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
+nama2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
 author=$(cat /etc/profil)
 TIMES="10"
 CHATID=$(cat /etc/per/id)
 KEY=$(cat /etc/per/token)
 URL="https://api.telegram.org/bot$KEY/sendMessage"
-superadmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $7}')
+superadmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $7}')
 MYIP=$(curl -sS ipv4.icanhazip.com)
-U2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-U3=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $3}')
-U4=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $4}')
-U5=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $5}')
-U6=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $6}')
+U2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+U3=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $3}')
+U4=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $4}')
+U5=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $5}')
+U6=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $6}')
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• GENERATE KEY IPVPS •           ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           	${WH}• GENERATE KEY IPVPS •       	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 if [ "$superadmin" = "VIP" ]; then
@@ -344,7 +344,7 @@ exp=$(date -d "$hari days" +"%Y-%m-%d")
 hariini=$(date -d "0 days" +"%Y-%m-%d")
 mkdir /root/rmbl
 cd /root/rmbl
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip &> /dev/null
+wget https://raw.githubusercontent.com/titis69/permission/main/ip &> /dev/null
 sed -i "s/### $U2 $U3 $U4 $U5 $U6/### $U2 $U3 $U4 $U5 $mkkey/g" ip
 git config --global --unset user.name &> /dev/null
 git config --global --unset user.email &> /dev/null
@@ -355,8 +355,8 @@ git init &> /dev/null
 git add /root/rmbl/ip &> /dev/null
 git commit -m register &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/okysmilee/permission &> /dev/null
-git push -f https://${tokenscript}@github.com/okysmilee/permission &> /dev/null
+git remote add origin https://github.com/titis69/permission &> /dev/null
+git push -f https://${tokenscript}@github.com/titis69/permission &> /dev/null
 sleep 0.5
 rm /root/rmbl/ip
 wget https://raw.githubusercontent.com/okysmilee/license/main/key &> /dev/null
@@ -392,7 +392,7 @@ git branch -M main >/dev/null 2>&1
 git remote add origin https://github.com/okysmilee/license >/dev/null 2>&1
 git push -f https://${tokenkey}@github.com/okysmilee/license >/dev/null 2>&1
 echo -e "$COLOR1╭════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}      ${WH}• GENERATOR KEY  •      ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}  	${WH}• GENERATOR KEY  •  	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC}  Sukses Create Key"
@@ -446,7 +446,7 @@ fi
 rm -rf /root/casper >/dev/null
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════ ${WH}BY${NC} ${COLOR1}═══════════════╮${NC}"
-echo -e "$COLOR1 ${NC}             ${WH}• $author •${NC}               $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}         	${WH}• $author •${NC}           	$COLOR1 $NC"
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -455,8 +455,8 @@ m-ip
 function tambahip(){
 clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
-listuser=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-superadmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $7}')
+listuser=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+superadmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $7}')
 uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
 author=$(cat /etc/profil)
 TIMES="10"
@@ -469,19 +469,19 @@ git config --global user.email "${emailscript}" &> /dev/null
 git config --global user.name "${userscript}" &> /dev/null
 mkdir /root/rmbl
 cd /root/rmbl/ &> /dev/null
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip &> /dev/null
+wget https://raw.githubusercontent.com/titis69/permission/main/ip &> /dev/null
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "ON " "ip")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• TAMBAH LIMIT IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           	${WH}• TAMBAH LIMIT IPVPS •          	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC}   [INFO] You have no existing clients!"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -489,13 +489,13 @@ m-ip
 fi
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• TAMBAH LIMIT IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           	${WH}• TAMBAH LIMIT IPVPS •          	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 grep -E "ON " "ip" | cut -d ' ' -f 2-6 | nl -s '. '
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e ""
 until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -536,11 +536,11 @@ git init &> /dev/null
 git add ip
 git commit -m remove &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/okysmilee/permission.git &> /dev/null
-git push -f https://${tokenscript}@github.com/okysmilee/permission.git &> /dev/null
+git remote add origin https://github.com/titis69/permission.git &> /dev/null
+git push -f https://${tokenscript}@github.com/titis69/permission.git &> /dev/null
 clear
 echo -e "$COLOR1╭══════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}         ${WH}• TAMBAH IPVPS ADMIN •        ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}     	${WH}• TAMBAH IPVPS ADMIN •    	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰══════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC}  Client IP Successfully Add"
@@ -563,7 +563,7 @@ cd
 rm -rf /root/rmbl >/dev/null
 echo -e "$COLOR1╰══════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭════════════════ ${WH}BY${NC} ${COLOR1}═════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰══════════════════════════════════════╯${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -572,8 +572,8 @@ m-ip
 function gantinama(){
 clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
-listuser=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-superadmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $7}')
+listuser=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+superadmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $7}')
 uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
 author=$(cat /etc/profil)
 TIMES="10"
@@ -586,7 +586,7 @@ git config --global user.email "${emailscript}" &> /dev/null
 git config --global user.name "${userscript}" &> /dev/null
 mkdir /root/rmbl
 cd /root/rmbl/ &> /dev/null
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip &> /dev/null
+wget https://raw.githubusercontent.com/titis69/permission/main/ip &> /dev/null
 clear
 grep -E "$uu$listuser" "ip" >>/root/rmbl/client
 if [ "$superadmin" = "VIP" ]; then
@@ -597,13 +597,13 @@ fi
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• GANTI NAMA IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           	${WH}• GANTI NAMA IPVPS •          	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC}   [INFO] You have no existing clients!"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -611,7 +611,7 @@ m-ip
 fi
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• GANTI NAMA IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           	${WH}• GANTI NAMA IPVPS •          	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 if [ "$superadmin" = "VIP" ]; then
@@ -621,7 +621,7 @@ grep -E "^###" "client" | cut -d ' ' -f 2-4 | nl -s '. '
 fi
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e ""
 until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -649,9 +649,9 @@ fi
 sed -i "s/### $name1/### $namabaru/g" ip &> /dev/null
 hariini2=$(date -d "0 days" +"%Y-%m-%d")
 TEXTD="
-Name old     : $namabaru
-Name New    : $name1
-Status        : succes change
+Name old 	: $namabaru
+Name New	: $name1
+Status    	: succes change
 "
 echo "${TEXTD}" >>/root/rmbl/delete_log  &> /dev/null
 rm -rf .git
@@ -659,18 +659,18 @@ git init &> /dev/null
 git add ip
 git commit -m remove &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/okysmilee/permission.git &> /dev/null
-git push -f https://${tokenscript}@github.com/okysmilee/permission.git &> /dev/null
+git remote add origin https://github.com/titis69/permission.git &> /dev/null
+git push -f https://${tokenscript}@github.com/titis69/permission.git &> /dev/null
 clear
 echo -e "$COLOR1╭══════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}         ${WH}• GANTI NAMA IPVPS •        ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}     	${WH}• GANTI NAMA IPVPS •    	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰══════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC}  Client IP Successfully Change"
 echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}  Name old    : $name1"
+echo -e "$COLOR1 ${NC}  Name old	: $name1"
 echo -e "$COLOR1 ${NC}  Name New   : $namabaru"
-echo -e "$COLOR1 ${NC}  IPVPS        : $ivps1"
+echo -e "$COLOR1 ${NC}  IPVPS    	: $ivps1"
 cd
 TEXT="
 <code>◇━━━━━━━━━━━━━━◇</code>
@@ -694,7 +694,7 @@ cd
 rm -rf /root/rmbl >/dev/null
 echo -e "$COLOR1╰══════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭════════════════ ${WH}BY${NC} ${COLOR1}═════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰══════════════════════════════════════╯${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -703,8 +703,8 @@ m-ip
 function renewipvps(){
 clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
-listuser=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-superadmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $7}')
+listuser=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+superadmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $7}')
 uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
 author=$(cat /etc/profil)
 TIMES="10"
@@ -717,15 +717,15 @@ git config --global user.email "${emailscript}" &> /dev/null
 git config --global user.name "${userscript}" &> /dev/null
 mkdir /root/rmbl
 cd /root/rmbl
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip &> /dev/null
+wget https://raw.githubusercontent.com/titis69/permission/main/ip &> /dev/null
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}• RENEW IPVPS •                ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}            	${WH}• RENEW IPVPS •            	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 until [[ $iprenew =~ ^[0-9.]+$ ]]; do
 read -p "   MASUKKAN IPNYA: " iprenew
-REQIP=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $4}')
+REQIP=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $4}')
 if [[ $iprenew = $REQIP ]]; then
 echo -ne
 else
@@ -737,7 +737,7 @@ fi
 done
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}• RENEW IPVPS •                ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}            	${WH}• RENEW IPVPS •            	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 until [[ $masaaktif =~ ^[0-3]+$ ]]; do
@@ -747,29 +747,29 @@ done
 if [ -z $masaaktif ]; then
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• RENEW IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           	${WH}• RENEW IPVPS •          	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Please Input Correct Number"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
 fi
-name1=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $2}') #name
-exp=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $3}') #exp
-ivps1=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $4}') #ip
-trial=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $5}') #ip
+name1=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $2}') #name
+exp=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $3}') #exp
+ivps1=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $4}') #ip
+trial=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $5}') #ip
 MYIP=$(curl -sS ipv4.icanhazip.com)
-UU2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-U2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-U3=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $3}')
-U4=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $4}')
-U5=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $5}')
-U6=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $6}')
+UU2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+U2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+U3=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $3}')
+U4=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $4}')
+U5=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $5}')
+U6=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $6}')
 now=$(date +%Y-%m-%d)
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$now" +%s)
@@ -785,18 +785,18 @@ git init &> /dev/null
 git add ip
 git commit -m renew &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/okysmilee/permission.git &> /dev/null
-git push -f https://${tokenscript}@github.com/okysmilee/permission.git &> /dev/null
+git remote add origin https://github.com/titis69/permission.git &> /dev/null
+git push -f https://${tokenscript}@github.com/titis69/permission.git &> /dev/null
 clear
 echo -e "$COLOR1╭════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}      ${WH}• RENEW IPVPS •      ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}  	${WH}• RENEW IPVPS •  	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC}  Client IP VPS Renew Successfully"
 echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}  IP VPS        : $ivps1"
-echo -e "$COLOR1 ${NC}  Renew Date    : $now"
-echo -e "$COLOR1 ${NC}  Days Added    : $masaaktif Days"
+echo -e "$COLOR1 ${NC}  IP VPS    	: $ivps1"
+echo -e "$COLOR1 ${NC}  Renew Date	: $now"
+echo -e "$COLOR1 ${NC}  Days Added	: $masaaktif Days"
 echo -e "$COLOR1 ${NC}  Expired Date  : $exp4"
 echo -e "$COLOR1 ${NC}  Client Name   : $name1"
 cd
@@ -806,8 +806,8 @@ TEXT="
 <code>◇━━━━━━━━━━━━━━◇</code>
 <b>CLIENT NAME   : <code>${name1}</code></b>
 <b>IP VPS CLIENT  : <code>${ivps1}</code></b>
-<b>RENEW DATE    : <code>${now}</code></b>
-<b>DAYS ADDED    : <code>${masaaktif} Days</code></b>
+<b>RENEW DATE	: <code>${now}</code></b>
+<b>DAYS ADDED	: <code>${masaaktif} Days</code></b>
 <b>EXPIRED DATE  : <code>${exp4}</code></b>
 <b>Succes Renew This IP</b>
 <code>◇━━━━━━━━━━━━━━◇</code>
@@ -825,7 +825,7 @@ cd
 rm -rf /root/rmbl >/dev/null
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭════════════ ${WH}BY${NC} ${COLOR1}═══════════════╮${NC}"
-echo -e "$COLOR1 ${NC}       ${WH}• $author •${NC}         $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}   	${WH}• $author •${NC}     	$COLOR1 $NC"
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -834,8 +834,8 @@ m-ip
 function gantinamabaru(){
 clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
-listuser=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-superadmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $7}')
+listuser=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+superadmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $7}')
 uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
 author=$(cat /etc/profil)
 TIMES="10"
@@ -848,15 +848,15 @@ git config --global user.email "${emailscript}" &> /dev/null
 git config --global user.name "${userscript}" &> /dev/null
 mkdir /root/rmbl
 cd /root/rmbl
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip &> /dev/null
+wget https://raw.githubusercontent.com/titis69/permission/main/ip &> /dev/null
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}• CHANGE NAME •                ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}            	${WH}• CHANGE NAME •            	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 until [[ $iprenew =~ ^[0-9.]+$ ]]; do
 read -p "   MASUKKAN IPNYA: " iprenew
-REQIP=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $4}')
+REQIP=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $4}')
 if [[ $iprenew = $REQIP ]]; then
 echo -ne
 else
@@ -868,7 +868,7 @@ fi
 done
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}• CHANGE NAME •                ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}            	${WH}• CHANGE NAME •            	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 echo ""
@@ -876,29 +876,29 @@ read -p " INPUT NAMA BARU: " masaaktif
 if [ -z $masaaktif ]; then
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• CHANGE NAME •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           	${WH}• CHANGE NAME •          	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Please Input Correct Number"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
 fi
-name1=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $2}') #name
-exp=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $3}') #exp
-ivps1=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $4}') #ip
-trial=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $5}') #ip
+name1=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $2}') #name
+exp=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $3}') #exp
+ivps1=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $4}') #ip
+trial=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $5}') #ip
 MYIP=$(curl -sS ipv4.icanhazip.com)
-UU2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-U2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-U3=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $3}')
-U4=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $4}')
-U5=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $5}')
-U6=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $6}')
+UU2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+U2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+U3=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $3}')
+U4=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $4}')
+U5=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $5}')
+U6=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $6}')
 ws=1
 regip2=$(expr "$U6" - "$ws")
 sed -i "s/### $U2 $U3 $U4 $U5 $U6/### $U2 $U3 $U4 $U5 ${regip2}/g" ip
@@ -908,16 +908,16 @@ git init &> /dev/null
 git add ip
 git commit -m renew &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/okysmilee/permission.git &> /dev/null
-git push -f https://${tokenscript}@github.com/okysmilee/permission.git &> /dev/null
+git remote add origin https://github.com/titis69/permission.git &> /dev/null
+git push -f https://${tokenscript}@github.com/titis69/permission.git &> /dev/null
 clear
 echo -e "$COLOR1╭════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}      ${WH}• CHANGE NAME •      ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}  	${WH}• CHANGE NAME •  	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC}  Client CHANGE Name Successfully"
 echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}  IP VPS     : $ivps1"
+echo -e "$COLOR1 ${NC}  IP VPS 	: $ivps1"
 echo -e "$COLOR1 ${NC}  Name Old   : $name1"
 echo -e "$COLOR1 ${NC}  Name New   : $masaaktif"
 cd
@@ -926,8 +926,8 @@ TEXT="
 <b> 🔥 CHANGE NAME IPVPS</b>
 <code>◇━━━━━━━━━━━━━━◇</code>
 <b>IP VPS CLIENT  : <code>${ivps1}</code></b>
-<b>CLIENT NAME OLD    : <code>${name1}</code></b>
-<b>CLIENT NAME NEW    : <code>${masaaktif} Days</code></b>
+<b>CLIENT NAME OLD	: <code>${name1}</code></b>
+<b>CLIENT NAME NEW	: <code>${masaaktif} Days</code></b>
 <b>Succes Change Name</b>
 <code>◇━━━━━━━━━━━━━━◇</code>
 <i>Tunggu 2menit Dulu Lalu Masuk Lagi</i>
@@ -944,7 +944,7 @@ cd
 rm -rf /root/rmbl >/dev/null
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭════════════ ${WH}BY${NC} ${COLOR1}═══════════════╮${NC}"
-echo -e "$COLOR1 ${NC}       ${WH}• $author •${NC}         $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}   	${WH}• $author •${NC}     	$COLOR1 $NC"
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -953,8 +953,8 @@ m-ip
 function gantiipbaru(){
 clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
-listuser=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-superadmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $7}')
+listuser=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+superadmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $7}')
 uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
 author=$(cat /etc/profil)
 TIMES="10"
@@ -967,15 +967,15 @@ git config --global user.email "${emailscript}" &> /dev/null
 git config --global user.name "${userscript}" &> /dev/null
 mkdir /root/rmbl
 cd /root/rmbl
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip &> /dev/null
+wget https://raw.githubusercontent.com/titis69/permission/main/ip &> /dev/null
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}• CHANGE IPVPS •               ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}            	${WH}• CHANGE IPVPS •           	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 until [[ $iprenew =~ ^[0-9.]+$ ]]; do
 read -p "   MASUKKAN IPNYA: " iprenew
-REQIP=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $4}')
+REQIP=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $4}')
 if [[ $iprenew = $REQIP ]]; then
 echo -ne
 else
@@ -987,7 +987,7 @@ fi
 done
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}• CHANGE IPVPS •               ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}            	${WH}• CHANGE IPVPS •           	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 until [[ $masaaktif =~ ^[0-9.]+$ ]]; do
@@ -997,29 +997,29 @@ done
 if [ -z $masaaktif ]; then
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• CHANGE IPVPS •             ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           	${WH}• CHANGE IPVPS •         	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC}  [INFO] Please Input Correct Number"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
 fi
-name1=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $2}') #name
-exp=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $3}') #exp
-ivps1=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $4}') #ip
-trial=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $5}') #ip
+name1=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $2}') #name
+exp=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $3}') #exp
+ivps1=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $4}') #ip
+trial=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $5}') #ip
 MYIP=$(curl -sS ipv4.icanhazip.com)
-UU2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-U2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-U3=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $3}')
-U4=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $4}')
-U5=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $5}')
-U6=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $6}')
+UU2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+U2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+U3=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $3}')
+U4=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $4}')
+U5=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $5}')
+U6=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $6}')
 ws=1
 regip2=$(expr "$U6" - "$ws")
 sed -i "s/### $U2 $U3 $U4 $U5 $U6/### $U2 $U3 $U4 $U5 ${regip2}/g" ip
@@ -1029,17 +1029,17 @@ git init &> /dev/null
 git add ip
 git commit -m renew &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/okysmilee/permission.git &> /dev/null
-git push -f https://${tokenscript}@github.com/okysmilee/permission.git &> /dev/null
+git remote add origin https://github.com/titis69/permission.git &> /dev/null
+git push -f https://${tokenscript}@github.com/titis69/permission.git &> /dev/null
 clear
 echo -e "$COLOR1╭════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}     ${WH}• CHANGE IPVPS •      ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1} 	${WH}• CHANGE IPVPS •  	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC}  Client IP VPS Change Successfully"
 echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}  IP OLD        : $ivps1"
-echo -e "$COLOR1 ${NC}  IP NEW        : $masaaktif"
+echo -e "$COLOR1 ${NC}  IP OLD    	: $ivps1"
+echo -e "$COLOR1 ${NC}  IP NEW    	: $masaaktif"
 echo -e "$COLOR1 ${NC}  Expired Date  : $U4"
 echo -e "$COLOR1 ${NC}  Client Name   : $name1"
 cd
@@ -1067,7 +1067,7 @@ rm -rf /root/rmbl >/dev/null
 rm -rf /etc/github
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭════════════ ${WH}BY${NC} ${COLOR1}═══════════════╮${NC}"
-echo -e "$COLOR1 ${NC}       ${WH}• $author •${NC}         $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}   	${WH}• $author •${NC}     	$COLOR1 $NC"
 echo -e "$COLOR1╰════════════════════════════════╯${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -1076,8 +1076,8 @@ m-ip
 function delipbaru(){
 clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
-listuser=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-superadmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $7}')
+listuser=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+superadmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $7}')
 uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
 author=$(cat /etc/profil)
 TIMES="10"
@@ -1090,15 +1090,15 @@ git config --global user.email "${emailscript}" &> /dev/null
 git config --global user.name "${userscript}" &> /dev/null
 mkdir /root/rmbl
 cd /root/rmbl
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip &> /dev/null
+wget https://raw.githubusercontent.com/titis69/permission/main/ip &> /dev/null
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}• DELETE IPVPS •               ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}            	${WH}• DELETE IPVPS •           	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 until [[ $iprenew =~ ^[0-9.]+$ ]]; do
 read -p "   MASUKKAN IPNYA: " iprenew
-REQIP=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $4}')
+REQIP=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $4}')
 if [[ $iprenew = $REQIP ]]; then
 echo -ne
 else
@@ -1110,26 +1110,26 @@ fi
 done
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}• DELETE IPVPS •               ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}            	${WH}• DELETE IPVPS •           	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 echo -e " Proses Deleting"
-name1=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $2}') #name
-exp=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $3}') #exp
-ivps1=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $4}') #ip
-trial=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $iprenew | awk '{print $5}') #ip
+name1=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $2}') #name
+exp=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $3}') #exp
+ivps1=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $4}') #ip
+trial=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $iprenew | awk '{print $5}') #ip
 MYIP=$(curl -sS ipv4.icanhazip.com)
-UU2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-U2=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-U3=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $3}')
-U4=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $4}')
-U5=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $5}')
-U6=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $6}')
+UU2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+U2=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+U3=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $3}')
+U4=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $4}')
+U5=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $5}')
+U6=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $6}')
 sed -i "/### $name1 $exp $ivps1 $trial/d" ip &> /dev/null
 hariini2=$(date -d "0 days" +"%Y-%m-%d")
 TEXTD="
-Name     : $name1
-IPVPS    : $ivps1
+Name 	: $name1
+IPVPS	: $ivps1
 Status   : Deleted on  $hariini2
 "
 echo "${TEXTD}" >>/root/rmbl/delete_log  &> /dev/null
@@ -1138,16 +1138,16 @@ git init &> /dev/null
 git add ip
 git commit -m remove &> /dev/null
 git branch -M main &> /dev/null
-git remote add origin https://github.com/okysmilee/permission.git &> /dev/null
-git push -f https://${tokenscript}@github.com/okysmilee/permission.git &> /dev/null
+git remote add origin https://github.com/titis69/permission.git &> /dev/null
+git push -f https://${tokenscript}@github.com/titis69/permission.git &> /dev/null
 clear
 echo -e "$COLOR1╭═════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}         ${WH}• DELETE IPVPS •        ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}     	${WH}• DELETE IPVPS •    	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰══════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC}  Client IP Deleted Successfully"
 echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}  IP VPS       : $ivps1"
+echo -e "$COLOR1 ${NC}  IP VPS   	: $ivps1"
 echo -e "$COLOR1 ${NC}  Expired Date : $exp"
 echo -e "$COLOR1 ${NC}  Client Name  : $name1"
 cd
@@ -1174,7 +1174,7 @@ cd
 rm -rf /root/rmbl >/dev/null
 echo -e "$COLOR1╰══════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭════════════════ ${WH}BY${NC} ${COLOR1}═════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -1183,19 +1183,19 @@ m-ip
 function useripvps(){
 clear
 MYIP=$(curl -sS ipv4.icanhazip.com)
-listuser=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $2}')
-superadmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $7}')
+listuser=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $2}')
+superadmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $7}')
 uu=$(curl -sS https://pastebin.com/raw/BZ9Fcnqf)
 author=$(cat /etc/profil)
 cd
 mkdir /root/rmbl
 cd /root/rmbl/
-wget https://raw.githubusercontent.com/okysmilee/permission/main/ip &> /dev/null
+wget https://raw.githubusercontent.com/titis69/permission/main/ip &> /dev/null
 clear
 grep -E "$uu$listuser" "ip" >>/root/rmbl/client
 grep -E "@trial" "ip" >>/root/rmbl/client
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• LIST IPVPS •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           	${WH}• LIST IPVPS •          	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 if [ "$superadmin" = "VIP" ]; then
@@ -1205,7 +1205,7 @@ grep -E "^###" "client" | cut -d ' ' -f 2-4 | nl -s '. '
 fi
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 cd
 rm -rf /root/rmbl >/dev/null
@@ -1213,14 +1213,14 @@ echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
 }
-Isadmin=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $5}')
-ip=$(curl -sS https://raw.githubusercontent.com/okysmilee/permission/main/ip | grep $MYIP | awk '{print $6}')
+Isadmin=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $5}')
+ip=$(curl -sS https://raw.githubusercontent.com/titis69/permission/main/ip | grep $MYIP | awk '{print $6}')
 if [ "$Isadmin" = "ON" ]; then
 echo -ne
 else
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• PREMIUM USER ONLY •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}        	${WH}• PREMIUM USER ONLY •          	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC} [INFO] Only PRO Users Can Use This Panel"
@@ -1228,7 +1228,7 @@ echo -e "$COLOR1 ${NC} [INFO] Buy Premium Membership : "
 echo -e "$COLOR1 ${NC} [INFO] PM : https://t.me/rmblvpn1"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -1237,7 +1237,7 @@ fi
 if [[ $ip -le 0 ]]; then
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• PREMIUM USER ONLY •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}        	${WH}• PREMIUM USER ONLY •          	${NC} $COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
 echo -e "$COLOR1 ${NC} [INFO] SISA IP/KEY REGIST KAMU SUDAH HABIS"
@@ -1245,7 +1245,7 @@ echo -e "$COLOR1 ${NC} [INFO] Buy IP/KEY Premium SUPER ADMIN : "
 echo -e "$COLOR1 ${NC} [INFO] PM : https://t.me/rmblvpn1"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭══════════════════════ ${WH}BY${NC} ${COLOR1}═══════════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• $author •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}            	${WH}• $author •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -1253,18 +1253,18 @@ menu
 fi
 clear
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "$COLOR1│${NC}${COLBG1}            ${WH}• PANEL RESELLER IP •                ${NC}$COLOR1│ $NC"
+echo -e "$COLOR1│${NC}${COLBG1}        	${WH}• PANEL RESELLER IP •            	${NC}$COLOR1│ $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════════════════════════════════════╮${NC}"
-echo -e "   $COLOR1 [01]$NC • ${WH}ADD IPVPS      $COLOR1 [05]$NC • ${WH}RENEW IPVPS"
+echo -e "   $COLOR1 [01]$NC • ${WH}ADD IPVPS  	$COLOR1 [05]$NC • ${WH}RENEW IPVPS"
 echo -e "   $COLOR1 [02]$NC • ${WH}KEY GENERATOR$COLOR1   [06]$NC • ${WH}LIST IPVPS"
 echo -e "   $COLOR1 [03]$NC • ${WH}DELETE IPVPS   $COLOR1 [07]$NC • ${WH}CHANGE IPVPS"
-echo -e "   $COLOR1 [04]$NC • ${WH}CHANGE NAME    $COLOR1 [08]$NC • ${WH}TAMBAH IP [ADMIN]"
+echo -e "   $COLOR1 [04]$NC • ${WH}CHANGE NAME	$COLOR1 [08]$NC • ${WH}TAMBAH IP [ADMIN]"
 echo -e "   "
 echo -e "   $COLOR1 [00]$NC • ${WH}GO BACK"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e "$COLOR1╭═════════════════ ${WH}SISA IP REG${NC} ${COLOR1}═══════════════════╮${NC}"
-echo -e "$COLOR1 ${NC}                    ${WH}• $ip •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                	${WH}• $ip •${NC}             	$COLOR1 $NC"
 echo -e "$COLOR1╰═════════════════════════════════════════════════╯${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
@@ -1281,3 +1281,4 @@ case $opt in
 00 | 0) clear ; menu ;;
 *) clear ; m-ip ;;
 esac
+
