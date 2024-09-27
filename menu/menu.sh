@@ -27,7 +27,36 @@ ipsaya=$(wget -qO- ifconfig.me)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
 data_ip="https://raw.githubusercontent.com/titis69/permission/main/ip"
-
+checking_sc() {
+useexp=$(curl -sS $data_ip | grep $ipsaya | awk '{print $3}')
+if [[ $date_list < $useexp ]]; then
+echo -ne
+else
+systemctl stop nginx
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}${COLBG1}          ${WH}• AUTOSCRIPT PREMIUM •                 ${NC}$COLOR1│ $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│            ${RED}PERMISSION DENIED !${NC}                  $COLOR1│"
+echo -e "$COLOR1│   ${yl}Your VPS${NC} $ipsaya \033[0;36mHas been Banned ${NC}      $COLOR1│"
+echo -e "$COLOR1│     ${yl}Buy access permissions for scripts${NC}          $COLOR1│"
+echo -e "$COLOR1│             \033[0;32mContact Your Admin ${NC}                 $COLOR1│"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+key
+fi
+}
+function key(){
+rm -rf /root/rmbl
+echo -e  "${COLOR1}┌──────────────────────────────────────────┐${NC}"
+echo -e  "${COLOR1}│              PASWORD SCRIPT RMBL VPN     │${NC}"
+echo -e  "${COLOR1}└──────────────────────────────────────────┘${NC}"
+echo " "
+read -rp "Masukan Key Kamu Disini ctrl + c Exit : " -e kode
+cd
+if [ -z $kode ]; then
+echo -e "KODE SALAH SILAHKAN MASUKKAN ULANG KODENYA"
+key
+fi
 clear
 LIST=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $2}')
 Key=$(curl -sS https://raw.githubusercontent.com/titis69/license/main/key | grep $kode | awk '{print $3}')
